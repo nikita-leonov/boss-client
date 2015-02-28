@@ -256,7 +256,7 @@ public final class Mapper<N: Mappable> {
 			}
 
 			if let JSON = JSONData {
-				return NSString(data: JSON, encoding: NSUTF8StringEncoding)
+				return NSString(data: JSON, encoding: NSUTF8StringEncoding) as! String
 			}
 		}
 

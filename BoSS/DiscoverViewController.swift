@@ -17,33 +17,19 @@ class DiscoverViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
 
-        let imagePickerController:UIImagePickerController = UIImagePickerController()
-        
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
-            imagePickerController.sourceType = UIImagePickerControllerSourceType.Camera
-        } else {
-            imagePickerController.sourceType = UIImagePickerControllerSourceType.SavedPhotosAlbum
-        }
-        
-        self.navigationController!.presentViewController(imagePickerController, animated: true, completion: nil)
-
-        /*
         snap.rac_command = RACCommand(signalBlock: { [weak self] (value) -> RACSignal! in
-            if let strongSelf = self {
-                let imagePickerController:UIImagePickerController = UIImagePickerController()
-                
-                if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
-                    imagePickerController.sourceType = UIImagePickerControllerSourceType.Camera
-                } else {
-                    imagePickerController.sourceType = UIImagePickerControllerSourceType.SavedPhotosAlbum
+            RACSignal.createSignal({ [weak self] (subscriber) -> RACDisposable! in
+                if let strongSelf = self {
+                    let imagePickerController: ImagePickerController = ImagePickerController()
+                    
+                    strongSelf.navigationController!.presentViewController(imagePickerController, animated: true, completion: { [weak subscriber] _ in
+                        _ = subscriber?.sendCompleted()
+                    })
                 }
                 
-                strongSelf.navigationController!.presentViewController(imagePickerController, animated: true, completion: nil)
-            }
-            
-            return RACSignal.empty()
+                return RACDisposable {}
+            })
         })
-        */
     }
 }
 

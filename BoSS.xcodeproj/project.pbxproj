@@ -10,6 +10,8 @@
 		115FDF161AA273AD00F1D6C1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115FDF151AA273AD00F1D6C1 /* CoreLocation.framework */; };
 		115FDF191AA2759400F1D6C1 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115FDF181AA2759400F1D6C1 /* LocationService.swift */; };
 		115FDF1B1AA275A000F1D6C1 /* BaseServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115FDF1A1AA275A000F1D6C1 /* BaseServiceProtocol.swift */; };
+		1180B3501AA27E5100746875 /* ImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1180B34F1AA27E5100746875 /* ImagePickerController.swift */; };
+		1180B3521AA2826000746875 /* ImagePickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1180B3511AA2826000746875 /* ImagePickerViewModel.swift */; };
 		11A1000F1AA2773D00C728D7 /* LocationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A1000E1AA2773D00C728D7 /* LocationServiceProtocol.swift */; };
 		11AA657D1AA24BD8004DA34B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA657C1AA24BD8004DA34B /* AppDelegate.swift */; };
 		11AA657F1AA24BD8004DA34B /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA657E1AA24BD8004DA34B /* DiscoverViewController.swift */; };
@@ -36,6 +38,8 @@
 		115FDF151AA273AD00F1D6C1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		115FDF181AA2759400F1D6C1 /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationService.swift; path = Services/LocationService.swift; sourceTree = "<group>"; };
 		115FDF1A1AA275A000F1D6C1 /* BaseServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseServiceProtocol.swift; path = Services/BaseServiceProtocol.swift; sourceTree = "<group>"; };
+		1180B34F1AA27E5100746875 /* ImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerController.swift; sourceTree = "<group>"; };
+		1180B3511AA2826000746875 /* ImagePickerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerViewModel.swift; sourceTree = "<group>"; };
 		11A1000E1AA2773D00C728D7 /* LocationServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationServiceProtocol.swift; path = Services/LocationServiceProtocol.swift; sourceTree = "<group>"; };
 		11AA65771AA24BD8004DA34B /* BoSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoSS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11AA657B1AA24BD8004DA34B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -119,13 +123,15 @@
 		11AA65791AA24BD8004DA34B /* BoSS */ = {
 			isa = PBXGroup;
 			children = (
+				115FDF171AA2756200F1D6C1 /* Services */,
+				11AA657A1AA24BD8004DA34B /* Supporting Files */,
 				11AA657C1AA24BD8004DA34B /* AppDelegate.swift */,
 				11AA657E1AA24BD8004DA34B /* DiscoverViewController.swift */,
+				1180B34F1AA27E5100746875 /* ImagePickerController.swift */,
+				1180B3511AA2826000746875 /* ImagePickerViewModel.swift */,
 				11AA65821AA24BD8004DA34B /* Main.storyboard */,
 				11AA65851AA24BD8004DA34B /* Images.xcassets */,
 				11AA65871AA24BD8004DA34B /* LaunchScreen.xib */,
-				115FDF171AA2756200F1D6C1 /* Services */,
-				11AA657A1AA24BD8004DA34B /* Supporting Files */,
 			);
 			path = BoSS;
 			sourceTree = "<group>";
@@ -324,9 +330,11 @@
 			files = (
 				A13217321AA2572C007159C6 /* ServiceLocator.swift in Sources */,
 				115FDF1B1AA275A000F1D6C1 /* BaseServiceProtocol.swift in Sources */,
+				1180B3521AA2826000746875 /* ImagePickerViewModel.swift in Sources */,
 				11AA657D1AA24BD8004DA34B /* AppDelegate.swift in Sources */,
 				115FDF191AA2759400F1D6C1 /* LocationService.swift in Sources */,
 				11A1000F1AA2773D00C728D7 /* LocationServiceProtocol.swift in Sources */,
+				1180B3501AA27E5100746875 /* ImagePickerController.swift in Sources */,
 				11AA657F1AA24BD8004DA34B /* DiscoverViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

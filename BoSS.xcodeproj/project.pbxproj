@@ -16,6 +16,8 @@
 		11AA65951AA24BD8004DA34B /* BoSSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA65941AA24BD8004DA34B /* BoSSTests.swift */; };
 		393063DC3811C1A69FD9E964 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC8897B6A4D1A2C59F7007D /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A13217321AA2572C007159C6 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13217311AA2572C007159C6 /* ServiceLocator.swift */; };
+		A13217351AA28486007159C6 /* Submission.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13217341AA28486007159C6 /* Submission.swift */; };
+		A13217371AA289ED007159C6 /* LocationTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13217361AA289ED007159C6 /* LocationTransform.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		11AA65941AA24BD8004DA34B /* BoSSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoSSTests.swift; sourceTree = "<group>"; };
 		9AC8897B6A4D1A2C59F7007D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A13217311AA2572C007159C6 /* ServiceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
+		A13217341AA28486007159C6 /* Submission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Submission.swift; sourceTree = "<group>"; };
+		A13217361AA289ED007159C6 /* LocationTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTransform.swift; sourceTree = "<group>"; };
 		A458BB2FC592F4A96251131B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C3537E968B83FC3AC8EC75D4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +101,7 @@
 		11AA65791AA24BD8004DA34B /* BoSS */ = {
 			isa = PBXGroup;
 			children = (
+				A13217331AA28475007159C6 /* Models */,
 				A13217301AA25717007159C6 /* Services */,
 				11AA657C1AA24BD8004DA34B /* AppDelegate.swift */,
 				11AA657E1AA24BD8004DA34B /* FirstViewController.swift */,
@@ -148,6 +153,23 @@
 				A13217311AA2572C007159C6 /* ServiceLocator.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		A13217331AA28475007159C6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A132173A1AA28CF9007159C6 /* Transformers */,
+				A13217341AA28486007159C6 /* Submission.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A132173A1AA28CF9007159C6 /* Transformers */ = {
+			isa = PBXGroup;
+			children = (
+				A13217361AA289ED007159C6 /* LocationTransform.swift */,
+			);
+			path = Transformers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,10 +323,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A13217351AA28486007159C6 /* Submission.swift in Sources */,
 				A13217321AA2572C007159C6 /* ServiceLocator.swift in Sources */,
 				11AA65811AA24BD8004DA34B /* SecondViewController.swift in Sources */,
 				11AA657D1AA24BD8004DA34B /* AppDelegate.swift in Sources */,
 				11AA657F1AA24BD8004DA34B /* FirstViewController.swift in Sources */,
+				A13217371AA289ED007159C6 /* LocationTransform.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

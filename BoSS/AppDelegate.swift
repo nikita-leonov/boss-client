@@ -14,10 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        let locationManager: CLLocationManager = CLLocationManager()
-        locationManager.requestAlwaysAuthorization()
+        let locationService: LocationServiceProtocol = LocationService()
+        ServiceLocator.registerService(locationService)
 
         return true
     }

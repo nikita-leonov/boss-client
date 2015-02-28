@@ -8,11 +8,11 @@
 
 import CoreLocation
 
-class LocationService: BaseService {
+class LocationService: LocationServiceProtocol {
     private var locationManager: CLLocationManager!
     
     init() {
         locationManager = CLLocationManager()
-        locationManager.requestAlwaysAuthorization()
+        locationManager.requestWhenInUseAuthorization()
     }
 }

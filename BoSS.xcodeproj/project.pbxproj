@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		115FDF161AA273AD00F1D6C1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115FDF151AA273AD00F1D6C1 /* CoreLocation.framework */; };
 		115FDF191AA2759400F1D6C1 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115FDF181AA2759400F1D6C1 /* LocationService.swift */; };
-		115FDF1B1AA275A000F1D6C1 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115FDF1A1AA275A000F1D6C1 /* BaseService.swift */; };
+		115FDF1B1AA275A000F1D6C1 /* BaseServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115FDF1A1AA275A000F1D6C1 /* BaseServiceProtocol.swift */; };
+		11A1000F1AA2773D00C728D7 /* LocationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A1000E1AA2773D00C728D7 /* LocationServiceProtocol.swift */; };
 		11AA657D1AA24BD8004DA34B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA657C1AA24BD8004DA34B /* AppDelegate.swift */; };
 		11AA657F1AA24BD8004DA34B /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA657E1AA24BD8004DA34B /* DiscoverViewController.swift */; };
 		11AA65841AA24BD8004DA34B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11AA65821AA24BD8004DA34B /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 		11AA65951AA24BD8004DA34B /* BoSSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA65941AA24BD8004DA34B /* BoSSTests.swift */; };
 		11AA659F1AA25912004DA34B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AA659E1AA25912004DA34B /* MapKit.framework */; };
 		393063DC3811C1A69FD9E964 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC8897B6A4D1A2C59F7007D /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		A13217321AA2572C007159C6 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13217311AA2572C007159C6 /* ServiceLocator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +35,8 @@
 /* Begin PBXFileReference section */
 		115FDF151AA273AD00F1D6C1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		115FDF181AA2759400F1D6C1 /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationService.swift; path = Services/LocationService.swift; sourceTree = "<group>"; };
-		115FDF1A1AA275A000F1D6C1 /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseService.swift; path = Services/BaseService.swift; sourceTree = "<group>"; };
+		115FDF1A1AA275A000F1D6C1 /* BaseServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseServiceProtocol.swift; path = Services/BaseServiceProtocol.swift; sourceTree = "<group>"; };
+		11A1000E1AA2773D00C728D7 /* LocationServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationServiceProtocol.swift; path = Services/LocationServiceProtocol.swift; sourceTree = "<group>"; };
 		11AA65771AA24BD8004DA34B /* BoSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoSS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11AA657B1AA24BD8004DA34B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11AA657C1AA24BD8004DA34B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 		11AA659E1AA25912004DA34B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		11AA65A01AA26A61004DA34B /* BoSS-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BoSS-Bridging-Header.h"; sourceTree = "<group>"; };
 		9AC8897B6A4D1A2C59F7007D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A13217311AA2572C007159C6 /* ServiceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceLocator.swift; path = Services/ServiceLocator.swift; sourceTree = "<group>"; };
 		A458BB2FC592F4A96251131B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C3537E968B83FC3AC8EC75D4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,8 +88,10 @@
 		115FDF171AA2756200F1D6C1 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A13217311AA2572C007159C6 /* ServiceLocator.swift */,
+				11A1000E1AA2773D00C728D7 /* LocationServiceProtocol.swift */,
 				115FDF181AA2759400F1D6C1 /* LocationService.swift */,
-				115FDF1A1AA275A000F1D6C1 /* BaseService.swift */,
+				115FDF1A1AA275A000F1D6C1 /* BaseServiceProtocol.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -316,9 +322,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				115FDF1B1AA275A000F1D6C1 /* BaseService.swift in Sources */,
+				A13217321AA2572C007159C6 /* ServiceLocator.swift in Sources */,
+				115FDF1B1AA275A000F1D6C1 /* BaseServiceProtocol.swift in Sources */,
 				11AA657D1AA24BD8004DA34B /* AppDelegate.swift in Sources */,
 				115FDF191AA2759400F1D6C1 /* LocationService.swift in Sources */,
+				11A1000F1AA2773D00C728D7 /* LocationServiceProtocol.swift in Sources */,
 				11AA657F1AA24BD8004DA34B /* DiscoverViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

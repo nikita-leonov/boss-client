@@ -11,15 +11,6 @@ import CoreLocation
 class LocationService: NSObject, LocationServiceProtocol, CLLocationManagerDelegate {
     private let locationSubject = RACSubject()
     private var locationManager: CLLocationManager!
-    private var locationSubscribersCount: Int = 0 {
-        didSet {
-            if locationSubscribersCount == 0 {
-                locationManager.stopUpdatingLocation()
-            } else {
-                locationManager.startUpdatingLocation()
-            }
-        }
-    }
 
     override init() {
         super.init()
@@ -27,10 +18,10 @@ class LocationService: NSObject, LocationServiceProtocol, CLLocationManagerDeleg
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
     }
     
     func currentLocation() -> RACSignal {
-        locationSubscribersCount++
         return RACSignal.createSignal { [weak self] (subscriber) -> RACDisposable! in
             var result: RACDisposable = RACDisposable {}
             

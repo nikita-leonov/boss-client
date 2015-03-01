@@ -11,6 +11,7 @@ import MapKit
 import CoreLocation
 
 class SubmissionMapViewCell: UITableViewCell, SubmissionCell {
+    var annotation: MapPinViewModel!
     @IBOutlet var map: MKMapView!
     
     func setViewModel(viewModel: SubmissionViewModel) {
@@ -19,8 +20,11 @@ class SubmissionMapViewCell: UITableViewCell, SubmissionCell {
         } else {
             viewModel.locationUpdate.subscribeNext { [weak self] (location) -> Void in
                 if let location = location as? CLLocation {
-                    self?.map.addAnnotation(MapPinViewModel(coordinate: location.coordinate))
-                    self?.map.setCenterCoordinate(location.coordinate, animated: true)
+                    if (self?.annotation == nil) {
+                        self?.annotation = MapPinViewModel(coordinate: location.coordinate)
+                        self?.map.addAnnotation(self?.annotation)
+                        self?.map.setCenterCoordinate(location.coordinate, animated: true)
+                    }
                 }
             }
         }

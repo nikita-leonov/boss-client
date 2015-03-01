@@ -22,7 +22,11 @@ class SubmissionViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         submit.rac_command = viewModel.submit
+        submit.rac_command.executionSignals.concat().subscribeNext { [weak self] _ in
+            _ = self?.dismissViewControllerAnimated(true, completion: nil)
+        }
     }
     
     // MARK: - Table View Data Source

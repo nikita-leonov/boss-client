@@ -17,8 +17,9 @@ class Submission: Mappable {
     var photo: UIImage?
     var photoURL: NSURL!
     var location: CLLocation?
-    var donation: Double! = 0
+    var donation: Double! = 1.0
     var category: String! = "POTHOLE"
+    var status: String! = "CREATED"
     var identifier: String!
     
     // MARK: - Initializing a Submission Model
@@ -31,6 +32,7 @@ class Submission: Mappable {
         location <- (map["location"], LocationTransform())
         donation <- map["donation"]
         category <- map["category"]
+        status <- map["status"]
         identifier <- map["id"]
     }
     

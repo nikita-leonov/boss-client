@@ -13,9 +13,14 @@ import ObjectMapper
 class SubmissionsService: EntityWebService, SubmissionsServiceProtocol {
     
     func submissions() -> RACSignal {
-        return read("submissions", parameters: nil, page: nil).mapResponses { (submissions: [Submission]) in
+        return read("submissions").mapResponses { (submissions: [Submission]) in
             return submissions
         }
+    }
+    
+    func create(submission: Submission) -> RACSignal {
+        let request = Mapper<Submission>().toJSON(submission)
+        return create("submissions", parameters: request)
     }
     
 }

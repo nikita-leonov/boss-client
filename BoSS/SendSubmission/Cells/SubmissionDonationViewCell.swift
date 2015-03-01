@@ -14,7 +14,7 @@ class SubmissionDonationViewCell: UITableViewCell, SubmissionCell {
     @IBOutlet private weak var donate: UILabel!
     
     func setViewModel(viewModel: SubmissionViewModel) {
-        stepper.rac_newValueChannelWithNilValue(viewModel.donation).subscribeNextAs { [weak self] (value: Double) in
+        stepper.rac_newValueChannelWithNilValue(viewModel.donation).startWith(viewModel.donation).subscribeNextAs { [weak self] (value: Double) in
             viewModel.donation = value
             _ = self?.donate.text = "\(value)"
         }

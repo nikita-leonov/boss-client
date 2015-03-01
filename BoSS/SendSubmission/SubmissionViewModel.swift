@@ -48,13 +48,25 @@ class SubmissionViewModel {
         }
     }
     
+    internal lazy var submit: RACCommand = RACCommand(enabled: self.enabled()) { [weak self] _ in
+        var result = RACSignal.empty()
+        
+        if let strongSelf = self {
+            result = strongSelf.submissionsService.create(strongSelf.model)
+        }
+        
+        return result
+    }
+    
     private var model: Submission
     private let locationUpdateSubject: RACSubject = RACSubject()
+    private let submissionsService: SubmissionsServiceProtocol
     
     // MARK: - Initializing the Submission View Model
     
-    init(image:UIImage, locationService: LocationServiceProtocol) {
+    init(image:UIImage, locationService: LocationServiceProtocol, submissionsService: SubmissionsServiceProtocol) {
         locationUpdate = locationUpdateSubject
+        self.submissionsService = submissionsService
         
         model = Submission()
         model.photo = image
@@ -65,4 +77,9 @@ class SubmissionViewModel {
             }
         }
     }
+    
+    private func enabled() -> RACSignal {
+        return RACSignal.`return`(true)
+    }
+    
 }

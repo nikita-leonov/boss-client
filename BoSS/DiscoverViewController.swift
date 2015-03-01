@@ -26,8 +26,9 @@ class DiscoverViewController: UIViewController {
                     
                     viewModel.imageSelected!.subscribeNext({ (image) -> Void in
                         if let image = image as? UIImage {
-                            let submissionModel = SubmissionViewModel(image: image)
-                            let submissionViewController = SubmissionViewController()
+                            let locationService: LocationServiceProtocol = ServiceLocator.getService()
+                            let submissionModel = SubmissionViewModel(image: image, locationService: locationService)
+                            let submissionViewController = strongSelf.storyboard!.instantiateViewControllerWithIdentifier("submissionViewController") as! SubmissionViewController
                             submissionViewController.viewModel = submissionModel
                             
                             imagePickerController.pushViewController(submissionViewController, animated: true)

@@ -10,4 +10,10 @@ import Foundation
 
 class SubmissionViewController: UITableViewController {
     internal var viewModel: SubmissionViewModel!
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let result = super.tableView(tableView, cellForRowAtIndexPath: indexPath) as! SubmissionCell
+        result.setViewModel(viewModel)
+        return result as! UITableViewCell
+    }
 }

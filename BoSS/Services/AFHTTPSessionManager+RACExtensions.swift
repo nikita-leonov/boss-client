@@ -32,6 +32,7 @@ extension AFHTTPSessionManager {
                         subscriber.sendCompleted()
                     }
                 })
+                task.resume()
                 
                 result = RACDisposable { _ in
                     task.cancel

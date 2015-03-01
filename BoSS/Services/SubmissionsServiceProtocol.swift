@@ -9,8 +9,8 @@
 import Foundation
 import ReactiveCocoa
 
-protocol SubmissionsServiceProtocol {
+protocol SubmissionsServiceProtocol: BaseServiceProtocol {
     
-    func submissions() -> RACSignal?
+    func submissions() -> RACSignal
     
 }

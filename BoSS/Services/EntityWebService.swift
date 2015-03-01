@@ -19,7 +19,7 @@ class EntityWebService {
         self.sessionManager = sessionManager
     }
     
-    internal func read(path: String, parameters: AnyObject? = nil, page: [String: String]? = nil) -> RACSignal? {
+    internal func read(path: String, parameters: AnyObject? = nil, page: [String: String]? = nil) -> RACSignal {
         return sessionManager.rac_GET(path, parameters: parameters)
     }
     

@@ -10,6 +10,6 @@ import Foundation
 
 protocol CategoriesServiceProtocol: BaseServiceProtocol {
     
-    func categories() -> [String]
+    func categories() -> [Category]
     
 }

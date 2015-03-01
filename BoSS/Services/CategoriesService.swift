@@ -10,9 +10,14 @@ import Foundation
 
 class CategoriesService: CategoriesServiceProtocol {
     
-    private let fixedCategories: [String] = ["POTHOLE", "DEBRIS", "DAMAGED_SIDEWALK", "STREET_SWEEPING", "BROKEN_STREETLIGHTS"]
+    private let fixedCategories: [Category] = [
+        Category(name: "Pothole", identifier: "POTHOLE"),
+        Category(name: "Debris on Road", identifier: "DEBRIS"),
+        Category(name: "Damaged Sidewalk", identifier: "DAMAGED_SIDEWALK"),
+        Category(name: "Street Cleaning", identifier: "STREET_SWEEPING"),
+        Category(name: "Broken Streetlight", identifier: "BROKEN_STREETLIGHTS")]
     
-    func categories() -> [String] {
+    func categories() -> [Category] {
         return fixedCategories
     }
     

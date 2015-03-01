@@ -69,7 +69,7 @@ class SubmissionViewController: UITableViewController {
     @IBAction func unwindSubmissionTypeViewController(segue: UIStoryboardSegue) {
         let source = segue.sourceViewController as! CategoriesViewController
         if let categoryViewModel = source.selectedCategory {
-            viewModel.category = categoryViewModel.categoryName
+            viewModel.category = categoryViewModel.category
             tableView.reloadData()
         }
     }

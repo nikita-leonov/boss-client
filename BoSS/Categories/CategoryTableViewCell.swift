@@ -26,7 +26,7 @@ class CategoryTableViewCell: UITableViewCell {
     
     private func updateView() {
         if let viewModel = viewModel {
-            textLabel?.text = viewModel.categoryName
+            textLabel?.text = viewModel.category.name
         } else {
             prepareForReuse()
         }

@@ -9,7 +9,7 @@
         <!--Navigation Controller-->
         <scene sceneID="f3g-7Q-xfq">
             <objects>
-                <navigationController id="wwb-6P-w2e" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="wwb-6P-w2e" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fii-OI-Lg5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -35,43 +35,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ocm-ug-zUY">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <connections>
                                     <outlet property="delegate" destination="Fv9-zA-mc6" id="bUj-Ud-IRB"/>
                                 </connections>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUE-YN-nL8">
-                                <rect key="frame" x="257.5" y="468" width="75" height="75"/>
-                                <color key="backgroundColor" red="1" green="0.46194382859999999" blue="0.95605059530000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUE-YN-nL8">
+                                <rect key="frame" x="246" y="476" width="108" height="108"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cUE-YN-nL8" secondAttribute="height" multiplier="1:1" id="JMz-PL-LcT"/>
-                                    <constraint firstAttribute="width" constant="75" id="gil-4R-ndJ"/>
+                                    <constraint firstAttribute="height" constant="108" id="ejd-0A-KQb"/>
                                 </constraints>
-                                <state key="normal" title="Snap">
+                                <state key="normal" title="Snap" image="SubmitNewAlert">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ocm-ug-zUY" firstAttribute="centerX" secondItem="cUE-YN-nL8" secondAttribute="centerX" constant="5" id="2PB-z3-tq4"/>
+                            <constraint firstItem="ocm-ug-zUY" firstAttribute="centerX" secondItem="cUE-YN-nL8" secondAttribute="centerX" id="2PB-z3-tq4"/>
                             <constraint firstItem="Iix-nV-JM3" firstAttribute="top" secondItem="ocm-ug-zUY" secondAttribute="bottom" id="5AJ-bl-KBM"/>
-                            <constraint firstItem="ocm-ug-zUY" firstAttribute="leading" secondItem="aMW-Qe-8n2" secondAttribute="leadingMargin" constant="-16" id="Bp0-Fg-WjU"/>
-                            <constraint firstItem="ocm-ug-zUY" firstAttribute="top" secondItem="eas-pf-SVs" secondAttribute="bottom" id="Ghf-lr-Eil"/>
-                            <constraint firstItem="ocm-ug-zUY" firstAttribute="bottom" secondItem="cUE-YN-nL8" secondAttribute="bottom" constant="57" id="tX5-ea-Jbj"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ocm-ug-zUY" secondAttribute="trailing" constant="-16" id="vWc-bc-UHt"/>
+                            <constraint firstItem="ocm-ug-zUY" firstAttribute="top" secondItem="eas-pf-SVs" secondAttribute="bottom" constant="-20" id="Ghf-lr-Eil"/>
+                            <constraint firstAttribute="trailing" secondItem="ocm-ug-zUY" secondAttribute="trailing" id="UKr-BR-9Se"/>
+                            <constraint firstItem="ocm-ug-zUY" firstAttribute="leading" secondItem="aMW-Qe-8n2" secondAttribute="leading" id="mS7-Du-Upu"/>
+                            <constraint firstItem="ocm-ug-zUY" firstAttribute="bottom" secondItem="cUE-YN-nL8" secondAttribute="bottom" constant="16" id="tX5-ea-Jbj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="F8U-w8-8HS">
                         <nil key="title"/>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="0T3-lM-rqk">
-                            <rect key="frame" x="180" y="7" width="240" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <segments>
-                                <segment title="Map"/>
-                                <segment title="List"/>
-                            </segments>
-                        </segmentedControl>
                     </navigationItem>
                     <connections>
                         <outlet property="snap" destination="cUE-YN-nL8" id="Zoz-9r-gj2"/>
@@ -284,4 +275,7 @@
             <point key="canvasLocation" x="1126" y="842"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="SubmitNewAlert" width="108" height="108"/>
+    </resources>
 </document>

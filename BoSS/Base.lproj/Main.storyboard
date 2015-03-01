@@ -78,14 +78,14 @@
             </objects>
             <point key="canvasLocation" x="-464" y="836"/>
         </scene>
-        <!--Submission View Controller-->
+        <!--Report Issue-->
         <scene sceneID="Mae-AX-r8e">
             <objects>
                 <tableViewController storyboardIdentifier="submissionViewController" id="clA-mD-cxv" customClass="SubmissionViewController" customModule="BoSS" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="uG3-3p-hwP">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="uG3-3p-hwP">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
                             <tableViewSection id="JlH-ci-Rbl">
                                 <cells>
@@ -109,6 +109,10 @@
                                             <outlet property="photo" destination="kMd-ET-gs4" id="04V-RF-zTY"/>
                                         </connections>
                                     </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Approximate location" id="qxg-ns-fmq">
+                                <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="0rh-F7-623" customClass="SubmissionMapViewCell" customModule="BoSS" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0rh-F7-623" id="etW-h2-d02">
@@ -129,6 +133,10 @@
                                             <outlet property="map" destination="brW-cI-YOo" id="TE6-zY-jKe"/>
                                         </connections>
                                     </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="Y5G-TI-OU0" userLabel="Category">
+                                <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Udg-ih-87X" detailTextLabel="ybW-Vs-cR6" rowHeight="44" style="IBUITableViewCellStyleValue1" id="LMz-oL-aoa" customClass="SubmissionCategoryViewCell" customModule="BoSS" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LMz-oL-aoa" id="PeC-Rz-xTb">
@@ -154,18 +162,58 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Donate" id="1aL-St-wn4">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="103" id="ANt-Kx-s3l" customClass="SubmissionDonationViewCell" customModule="BoSS" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ANt-Kx-s3l" id="u2x-ts-3Ak">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DwD-ZX-Juk">
+                                                    <rect key="frame" x="8" y="8" width="10" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71K-N5-88r">
+                                                    <rect key="frame" x="26" y="8" width="40" height="86"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="72"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="vrG-8p-puK">
+                                                    <rect key="frame" x="498" y="36" width="94" height="29"/>
+                                                </stepper>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerYWithinMargins" secondItem="vrG-8p-puK" secondAttribute="centerYWithinMargins" constant="0.5" id="G1P-D5-sfa"/>
+                                                <constraint firstItem="DwD-ZX-Juk" firstAttribute="leading" secondItem="u2x-ts-3Ak" secondAttribute="leading" constant="8" id="QHQ-xw-aRJ"/>
+                                                <constraint firstItem="71K-N5-88r" firstAttribute="leading" secondItem="DwD-ZX-Juk" secondAttribute="trailing" constant="8" id="iCZ-k8-bXd"/>
+                                                <constraint firstItem="DwD-ZX-Juk" firstAttribute="top" secondItem="u2x-ts-3Ak" secondAttribute="top" constant="8" id="jRa-Vy-kWn"/>
+                                                <constraint firstAttribute="trailing" secondItem="vrG-8p-puK" secondAttribute="trailing" constant="8" id="otC-f5-yz8"/>
+                                                <constraint firstItem="71K-N5-88r" firstAttribute="top" secondItem="u2x-ts-3Ak" secondAttribute="top" constant="8" id="wP2-dW-gtA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="donate" destination="71K-N5-88r" id="cZG-X7-T9E"/>
+                                            <outlet property="stepper" destination="vrG-8p-puK" id="QbI-EI-CYx"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="clA-mD-cxv" id="yPl-Kh-cbD"/>
                             <outlet property="delegate" destination="clA-mD-cxv" id="rVW-RX-Q1D"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Report Issue" id="dni-ej-Klc"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fP2-x1-0J3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="420" y="842"/>
         </scene>
-        <!--Title-->
+        <!--Categories-->
         <scene sceneID="i5B-se-aiC">
             <objects>
                 <tableViewController id="r9Y-Wn-ffr" customClass="CategoriesViewController" customModule="BoSS" customModuleProvider="target" sceneMemberID="viewController">
@@ -197,7 +245,7 @@
                             <outlet property="delegate" destination="r9Y-Wn-ffr" id="VMJ-I1-Yvc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="Udd-5a-Vxi"/>
+                    <navigationItem key="navigationItem" title="Categories" id="Udd-5a-Vxi"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pAz-9l-5Uu" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="4JY-k1-Ggz" userLabel="Exit" sceneMemberID="exit"/>

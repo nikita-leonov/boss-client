@@ -79,6 +79,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="map" destination="ocm-ug-zUY" id="qDb-O8-6tW"/>
                         <outlet property="snap" destination="cUE-YN-nL8" id="Zoz-9r-gj2"/>
                     </connections>
                 </viewController>

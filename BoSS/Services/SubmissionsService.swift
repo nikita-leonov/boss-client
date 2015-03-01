@@ -9,10 +9,10 @@
 import Foundation
 import ReactiveCocoa
 
-class SubmissionsService: SubmissionsServiceProtocol {
+class SubmissionsService: EntityWebService, SubmissionsServiceProtocol {
     
     func submissions() -> RACSignal? {
-        return nil
+        return read("submissions", parameters: nil, page: nil)
     }
     
 }

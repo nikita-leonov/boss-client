@@ -13,14 +13,14 @@ import ReactiveCocoa
 
 class EntityWebService {
     
-    private let sessionManager: AFURLSessionManager
+    private let sessionManager: AFHTTPSessionManager
     
-    required init(sessionManager: AFURLSessionManager) {
+    required init(sessionManager: AFHTTPSessionManager) {
         self.sessionManager = sessionManager
     }
     
     internal func read(path: String, parameters: AnyObject? = nil, page: [String: String]? = nil) -> RACSignal? {
-        return nil
+        return sessionManager.rac_GET(path, parameters: parameters)
     }
     
 }

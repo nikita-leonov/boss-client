@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Bureau of Street Services. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class SubmissionPhotoViewCell: UITableViewCell, SubmissionCell {
     @IBOutlet var photo: UIImageView!

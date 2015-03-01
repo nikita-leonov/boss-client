@@ -24,11 +24,18 @@ class DiscoverViewController: UIViewController {
                     let imagePickerController: ImagePickerController = ImagePickerController()
                     imagePickerController.viewModel = viewModel
                     
-                    viewModel.imageSelected!.subscribeNext { (image) -> Void in
+                    viewModel.imageSelected!.subscribeNext({ (image) -> Void in
                         if let image = image as? UIImage {
-                            //TODO: Move to submit form
+                            let locationService: LocationServiceProtocol = ServiceLocator.getService()
+                            let submissionModel = SubmissionViewModel(image: image, locationService: locationService)
+                            let submissionViewController = strongSelf.storyboard!.instantiateViewControllerWithIdentifier("submissionViewController") as! SubmissionViewController
+                            submissionViewController.viewModel = submissionModel
+                            
+                            imagePickerController.pushViewController(submissionViewController, animated: true)
                         }
-                    }
+                    }, completed: { [weak self] _ in
+                        _ = self?.dismissViewControllerAnimated(true, completion: nil)
+                    })
 
                     strongSelf.navigationController!.presentViewController(imagePickerController, animated: true, completion: { [weak subscriber] _ in
                         _ = subscriber?.sendCompleted()

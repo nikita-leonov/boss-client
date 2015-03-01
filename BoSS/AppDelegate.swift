@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import AFNetworking
 import CoreLocation
 
 @UIApplicationMain

@@ -7,7 +7,6 @@
 //
 
 import CoreLocation
-import ReactiveCocoa
 
 class LocationService: NSObject, LocationServiceProtocol, CLLocationManagerDelegate {
     private let locationSubject = RACSubject()

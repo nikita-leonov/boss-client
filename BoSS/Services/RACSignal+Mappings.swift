@@ -6,7 +6,6 @@
 //  Copyright (c) 2015 Bureau of Street Services. All rights reserved.
 //
 
-import ReactiveCocoa
 import ObjectMapper
 
 extension RACSignal {

@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import ReactiveCocoa
 
 protocol SubmissionsServiceProtocol: BaseServiceProtocol {
     
@@ -15,6 +14,8 @@ protocol SubmissionsServiceProtocol: BaseServiceProtocol {
     
     func upload(image: UIImage) -> RACSignal
     
-    func create(submission: Submission) -> RACSignal
+    func getToken() -> RACSignal
+    
+    func create(submission: Submission, nonce: String) -> RACSignal
     
 }

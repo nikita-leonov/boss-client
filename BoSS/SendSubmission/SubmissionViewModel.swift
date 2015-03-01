@@ -8,7 +8,6 @@
 
 import Foundation
 import CoreLocation
-import ReactiveCocoa
 
 class SubmissionViewModel {
     
@@ -48,16 +47,19 @@ class SubmissionViewModel {
         }
     }
     
+    dynamic internal private(set) var accessToken: String?
+    internal var nonce: String?
+    
     internal lazy var submit: RACCommand = RACCommand { [weak self] _ in
         var result = RACSignal.empty()
         
-        if let submissionsService = self?.submissionsService, photo = self?.photo, model = self?.model {
+        if let submissionsService = self?.submissionsService, photo = self?.photo, model = self?.model, nonce = self?.nonce {
             result = submissionsService.upload(photo).doNext { (x) in
                 if let URL = x as? NSURL {
                     model.photoURL = URL
                 }
             }.flattenMap { _ in
-                return submissionsService.create(model)
+                return submissionsService.create(model, nonce: nonce)
             }
         }
         
@@ -81,6 +83,10 @@ class SubmissionViewModel {
             if let location = location as? CLLocation {
                 self?.location = location
             }
+        }
+        
+        submissionsService.getToken().subscribeNextAs { [weak self] (response: [String: String]) in
+            _ = self?.accessToken = response["token"]!
         }
     }
     

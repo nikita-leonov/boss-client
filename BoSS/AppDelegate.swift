@@ -12,7 +12,7 @@ import CoreLocation
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    private let baseURL: NSURL = NSURL(string: "http://ec2-52-10-252-124.us-west-2.compute.amazonaws.com/api/")!
+    private let baseURL: NSURL = NSURL(string: "http://10.60.0.74:3000/api/")!
 
     var window: UIWindow?
 

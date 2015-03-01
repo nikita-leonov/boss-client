@@ -46,6 +46,8 @@
 		A1A4A68F1AA2B48A00989804 /* RACSignal+Mappings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A4A68E1AA2B48A00989804 /* RACSignal+Mappings.swift */; };
 		A1F4E6751AA360E40068C92B /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A12ACA491AA34B2400FCAB8D /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A1F4E67C1AA386950068C92B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F4E67B1AA386950068C92B /* Category.swift */; };
+		A1F4E67E1AA38B0D0068C92B /* DiscoverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F4E67D1AA38B0D0068C92B /* DiscoverViewModel.swift */; };
+		A1F4E6801AA38F300068C92B /* CategoryTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F4E67F1AA38F300068C92B /* CategoryTransform.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +138,8 @@
 		A13217421AA29908007159C6 /* AFHTTPSessionManager+RACExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AFHTTPSessionManager+RACExtensions.swift"; sourceTree = "<group>"; };
 		A1A4A68E1AA2B48A00989804 /* RACSignal+Mappings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RACSignal+Mappings.swift"; sourceTree = "<group>"; };
 		A1F4E67B1AA386950068C92B /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		A1F4E67D1AA38B0D0068C92B /* DiscoverViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiscoverViewModel.swift; path = Discover/DiscoverViewModel.swift; sourceTree = "<group>"; };
+		A1F4E67F1AA38F300068C92B /* CategoryTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTransform.swift; sourceTree = "<group>"; };
 		A458BB2FC592F4A96251131B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C3537E968B83FC3AC8EC75D4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -314,6 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				A13217361AA289ED007159C6 /* LocationTransform.swift */,
+				A1F4E67F1AA38F300068C92B /* CategoryTransform.swift */,
 			);
 			path = Transformers;
 			sourceTree = "<group>";
@@ -322,6 +327,7 @@
 			isa = PBXGroup;
 			children = (
 				11AA657E1AA24BD8004DA34B /* DiscoverViewController.swift */,
+				A1F4E67D1AA38B0D0068C92B /* DiscoverViewModel.swift */,
 			);
 			name = Discover;
 			sourceTree = "<group>";
@@ -503,6 +509,7 @@
 				A111FE681AA2EACE009F55CB /* SubmissionPhotoViewCell.swift in Sources */,
 				A111FE581AA2DDD5009F55CB /* CategoriesService.swift in Sources */,
 				A1F4E67C1AA386950068C92B /* Category.swift in Sources */,
+				A1F4E6801AA38F300068C92B /* CategoryTransform.swift in Sources */,
 				11D415B11AA2908E007C1E09 /* ImagePickerController.swift in Sources */,
 				1180B3521AA2826000746875 /* ImagePickerViewModel.swift in Sources */,
 				A1A4A68F1AA2B48A00989804 /* RACSignal+Mappings.swift in Sources */,
@@ -519,6 +526,7 @@
 				A13217371AA289ED007159C6 /* LocationTransform.swift in Sources */,
 				A111FE651AA2EACE009F55CB /* SubmissionCategoryViewCell.swift in Sources */,
 				A111FE4E1AA2DA9E009F55CB /* CategoriesViewController.swift in Sources */,
+				A1F4E67E1AA38B0D0068C92B /* DiscoverViewModel.swift in Sources */,
 				A132173C1AA28FB8007159C6 /* SubmissionsServiceProtocol.swift in Sources */,
 				A111FE521AA2DAF7009F55CB /* CategoryTableViewCell.swift in Sources */,
 			);

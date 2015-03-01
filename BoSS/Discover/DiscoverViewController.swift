@@ -11,7 +11,28 @@ import CoreLocation
 import MapKit
 
 class DiscoverViewController: UIViewController {
-    @IBOutlet internal var snap: UIButton!
+    
+    @IBOutlet private var snap: UIButton!
+    @IBOutlet private var map: MKMapView!
+    
+    private var viewModel: DiscoverViewModel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        viewModel = DiscoverViewModel(submissionsService: ServiceLocator.getService())
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        viewModel.readSubmissions().subscribeNextAs { [weak self] (submissions: [Submission]) in
+            if let map = self?.map {
+                map.removeAnnotations(map.annotations)
+                map.addAnnotations(submissions)
+            }
+        }
+    }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
@@ -53,7 +74,7 @@ extension DiscoverViewController: MKMapViewDelegate {
     func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
         var span = MKCoordinateSpanMake(0.01, 0.01)
         var region = MKCoordinateRegionMake(userLocation.location.coordinate, span)
-        mapView.setRegion(region, animated: true)
+        mapView.setRegion(region, animated: false)
     }
 }
 

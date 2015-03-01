@@ -8,14 +8,35 @@
 
 import Foundation
 
+private let categoriesDictionary: [String: String] = [
+    "POTHOLE" : "Pothole",
+    "DEBRIS" : "Debris on Road",
+    "DAMAGED_SIDEWALK" : "Damaged Sidewalk",
+    "STREET_SWEEPING" : "Street Cleaning",
+    "BROKEN_STREETLIGHTS" : "Broken Streetlight",
+]
+
 class CategoriesService: CategoriesServiceProtocol {
     
-    private let fixedCategories: [Category] = [
-        Category(name: "Pothole", identifier: "POTHOLE"),
-        Category(name: "Debris on Road", identifier: "DEBRIS"),
-        Category(name: "Damaged Sidewalk", identifier: "DAMAGED_SIDEWALK"),
-        Category(name: "Street Cleaning", identifier: "STREET_SWEEPING"),
-        Category(name: "Broken Streetlight", identifier: "BROKEN_STREETLIGHTS")]
+    internal class func category(forIdentifier identifier: String) -> Category? {
+        var result: Category?
+        
+        if let name = categoriesDictionary[identifier] {
+            result = Category(name: name, identifier: identifier)
+        }
+        
+        return result
+    }
+    
+    private lazy var fixedCategories: [Category] = {
+        var result = [Category]()
+        
+        for (id, name) in categoriesDictionary {
+            result.append(Category(name: name, identifier: id))
+        }
+        
+        return result
+    }()
     
     func categories() -> [Category] {
         return fixedCategories

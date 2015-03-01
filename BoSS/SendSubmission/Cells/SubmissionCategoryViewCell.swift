@@ -11,7 +11,7 @@ import UIKit
 class SubmissionCategoryViewCell: UITableViewCell, SubmissionCell {
     
     func setViewModel(viewModel: SubmissionViewModel) {
-        detailTextLabel?.text = viewModel.categoryName
+        detailTextLabel?.text = viewModel.category.name
     }
     
 }

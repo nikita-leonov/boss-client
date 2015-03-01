@@ -18,17 +18,20 @@ class Submission: Mappable {
     var photoURL: NSURL!
     var location: CLLocation?
     var donation: Double!
+    var category: String!
     var identifier: String!
     
     // MARK: - Initializing a Submission Model
     
     required init() {
+        category = "ANIMAL CONTROL"
     }
     
     func mapping(map: Map) {
         photoURL <- (map["photoURL"], URLTransform())
         location <- (map["location"], LocationTransform())
         donation <- map["donation"]
+        category <- map["category"]
         identifier <- map["id"]
     }
     

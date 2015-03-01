@@ -11,9 +11,13 @@ import CoreLocation
 import ReactiveCocoa
 
 class SubmissionViewModel {
+    
+    // MARK: - Properties
+    
     internal var photo: UIImage? {
         return model.photo
     }
+    
     internal let locationUpdate: RACSignal!
 
     internal var location: CLLocation? {
@@ -25,8 +29,20 @@ class SubmissionViewModel {
             return model.location
         }
     }
+    
+    internal var category: String? {
+        set {
+            model.category = newValue
+        }
+        get {
+            return model.category
+        }
+    }
+    
     private var model: Submission
     private let locationUpdateSubject: RACSubject = RACSubject()
+    
+    // MARK: - Initializing the Submission View Model
     
     init(image:UIImage, locationService: LocationServiceProtocol) {
         locationUpdate = locationUpdateSubject

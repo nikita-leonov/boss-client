@@ -23,7 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let sessionManager = AFHTTPSessionManager(baseURL: baseURL)
         let submissionsService = SubmissionsService(sessionManager: sessionManager)
-        ServiceLocator.registerService(submissionsService)
+        ServiceLocator.registerService(submissionsService as SubmissionsServiceProtocol)
+        ServiceLocator.registerService(CategoriesService() as CategoriesServiceProtocol)
 
         return true
     }

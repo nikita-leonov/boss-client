@@ -26,6 +26,13 @@
 		11D415C11AA2A06D007C1E09 /* SubmissionMapViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D415C01AA2A06D007C1E09 /* SubmissionMapViewCell.swift */; };
 		11D415C31AA2C21C007C1E09 /* MapPinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D415C21AA2C21C007C1E09 /* MapPinViewModel.swift */; };
 		393063DC3811C1A69FD9E964 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC8897B6A4D1A2C59F7007D /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		A111FE4B1AA2CC55009F55CB /* SubmissionCategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A111FE4A1AA2CC55009F55CB /* SubmissionCategoryViewCell.swift */; };
+		A111FE4E1AA2DA9E009F55CB /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A111FE4D1AA2DA9E009F55CB /* CategoriesViewController.swift */; };
+		A111FE521AA2DAF7009F55CB /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A111FE511AA2DAF7009F55CB /* CategoryTableViewCell.swift */; };
+		A111FE541AA2DB5C009F55CB /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A111FE531AA2DB5C009F55CB /* CategoryViewModel.swift */; };
+		A111FE561AA2DDCC009F55CB /* CategoriesServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A111FE551AA2DDCC009F55CB /* CategoriesServiceProtocol.swift */; };
+		A111FE581AA2DDD5009F55CB /* CategoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A111FE571AA2DDD5009F55CB /* CategoriesService.swift */; };
+		A111FE5A1AA2E068009F55CB /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A111FE591AA2E068009F55CB /* CategoriesViewModel.swift */; };
 		A13217321AA2572C007159C6 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13217311AA2572C007159C6 /* ServiceLocator.swift */; };
 		A13217351AA28486007159C6 /* Submission.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13217341AA28486007159C6 /* Submission.swift */; };
 		A13217371AA289ED007159C6 /* LocationTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13217361AA289ED007159C6 /* LocationTransform.swift */; };
@@ -71,6 +78,13 @@
 		11D415C01AA2A06D007C1E09 /* SubmissionMapViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmissionMapViewCell.swift; sourceTree = "<group>"; };
 		11D415C21AA2C21C007C1E09 /* MapPinViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPinViewModel.swift; sourceTree = "<group>"; };
 		9AC8897B6A4D1A2C59F7007D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A111FE4A1AA2CC55009F55CB /* SubmissionCategoryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmissionCategoryViewCell.swift; sourceTree = "<group>"; };
+		A111FE4D1AA2DA9E009F55CB /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		A111FE511AA2DAF7009F55CB /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		A111FE531AA2DB5C009F55CB /* CategoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		A111FE551AA2DDCC009F55CB /* CategoriesServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesServiceProtocol.swift; sourceTree = "<group>"; };
+		A111FE571AA2DDD5009F55CB /* CategoriesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesService.swift; sourceTree = "<group>"; };
+		A111FE591AA2E068009F55CB /* CategoriesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
 		A13217311AA2572C007159C6 /* ServiceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		A13217341AA28486007159C6 /* Submission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Submission.swift; sourceTree = "<group>"; };
 		A13217361AA289ED007159C6 /* LocationTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTransform.swift; sourceTree = "<group>"; };
@@ -148,6 +162,8 @@
 				11AA65821AA24BD8004DA34B /* Main.storyboard */,
 				11D415BC1AA29AE4007C1E09 /* SubmissionPhotoViewCell.swift */,
 				11D415C01AA2A06D007C1E09 /* SubmissionMapViewCell.swift */,
+				A111FE4A1AA2CC55009F55CB /* SubmissionCategoryViewCell.swift */,
+				A111FE4C1AA2DA88009F55CB /* Categories */,
 				11D415C21AA2C21C007C1E09 /* MapPinViewModel.swift */,
 				11AA65851AA24BD8004DA34B /* Images.xcassets */,
 				11AA65871AA24BD8004DA34B /* LaunchScreen.xib */,
@@ -182,12 +198,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A111FE4C1AA2DA88009F55CB /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				A111FE4D1AA2DA9E009F55CB /* CategoriesViewController.swift */,
+				A111FE591AA2E068009F55CB /* CategoriesViewModel.swift */,
+				A111FE511AA2DAF7009F55CB /* CategoryTableViewCell.swift */,
+				A111FE531AA2DB5C009F55CB /* CategoryViewModel.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		A13217301AA25717007159C6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				A132173F1AA29032007159C6 /* EntityWebService.swift */,
 				A13217311AA2572C007159C6 /* ServiceLocator.swift */,
 				11D415B21AA290A3007C1E09 /* BaseServiceProtocol.swift */,
+				A111FE551AA2DDCC009F55CB /* CategoriesServiceProtocol.swift */,
+				A111FE571AA2DDD5009F55CB /* CategoriesService.swift */,
 				11D415B31AA290A3007C1E09 /* LocationService.swift */,
 				11D415B41AA290A3007C1E09 /* LocationServiceProtocol.swift */,
 				A132173B1AA28FB8007159C6 /* SubmissionsServiceProtocol.swift */,
@@ -377,22 +406,28 @@
 				A13217351AA28486007159C6 /* Submission.swift in Sources */,
 				11D415B71AA290A3007C1E09 /* LocationServiceProtocol.swift in Sources */,
 				A13217321AA2572C007159C6 /* ServiceLocator.swift in Sources */,
+				A111FE5A1AA2E068009F55CB /* CategoriesViewModel.swift in Sources */,
 				11D415BF1AA29B66007C1E09 /* SubmissionCell.swift in Sources */,
 				11D415B61AA290A3007C1E09 /* LocationService.swift in Sources */,
+				A111FE581AA2DDD5009F55CB /* CategoriesService.swift in Sources */,
 				11D415B11AA2908E007C1E09 /* ImagePickerController.swift in Sources */,
 				1180B3521AA2826000746875 /* ImagePickerViewModel.swift in Sources */,
 				A1A4A68F1AA2B48A00989804 /* RACSignal+Mappings.swift in Sources */,
+				A111FE561AA2DDCC009F55CB /* CategoriesServiceProtocol.swift in Sources */,
 				A132173E1AA28FC1007159C6 /* SubmissionsService.swift in Sources */,
 				11AA657D1AA24BD8004DA34B /* AppDelegate.swift in Sources */,
 				11D415B91AA291D4007C1E09 /* SubmissionViewController.swift in Sources */,
 				A13217431AA29908007159C6 /* AFHTTPSessionManager+RACExtensions.swift in Sources */,
 				A13217441AA29E36007159C6 /* DiscoverViewController.swift in Sources */,
+				A111FE4B1AA2CC55009F55CB /* SubmissionCategoryViewCell.swift in Sources */,
+				A111FE541AA2DB5C009F55CB /* CategoryViewModel.swift in Sources */,
 				11D415B51AA290A3007C1E09 /* BaseServiceProtocol.swift in Sources */,
-				11AA657F1AA24BD8004DA34B /* DiscoverViewController.swift in Sources */,
 				11D415C11AA2A06D007C1E09 /* SubmissionMapViewCell.swift in Sources */,
 				A13217401AA29032007159C6 /* EntityWebService.swift in Sources */,
 				A13217371AA289ED007159C6 /* LocationTransform.swift in Sources */,
+				A111FE4E1AA2DA9E009F55CB /* CategoriesViewController.swift in Sources */,
 				A132173C1AA28FB8007159C6 /* SubmissionsServiceProtocol.swift in Sources */,
+				A111FE521AA2DAF7009F55CB /* CategoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

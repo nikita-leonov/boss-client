@@ -10,10 +10,10 @@ import UIKit
 
 class CategoryViewModel {
     
-    internal let categoryName: String
+    internal let category: Category
     
-    required init(categoryName: String) {
-        self.categoryName = categoryName
+    required init(category: Category) {
+        self.category = category
     }
     
 }

@@ -12,7 +12,7 @@ class CategoriesViewModel {
     
     private let categoriesService: CategoriesServiceProtocol
     
-    internal var categories: [String] {
+    internal var categories: [Category] {
         return categoriesService.categories()
     }
     
@@ -25,7 +25,7 @@ class CategoriesViewModel {
     }
     
     internal func categoryViewModel(atIndex index: Int) -> CategoryViewModel {
-        return CategoryViewModel(categoryName: categories[index])
+        return CategoryViewModel(category: categories[index])
     }
     
 }

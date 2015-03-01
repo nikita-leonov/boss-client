@@ -44,8 +44,8 @@
 		A13217431AA29908007159C6 /* AFHTTPSessionManager+RACExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13217421AA29908007159C6 /* AFHTTPSessionManager+RACExtensions.swift */; };
 		A13217441AA29E36007159C6 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA657E1AA24BD8004DA34B /* DiscoverViewController.swift */; };
 		A1A4A68F1AA2B48A00989804 /* RACSignal+Mappings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A4A68E1AA2B48A00989804 /* RACSignal+Mappings.swift */; };
-		A1F4E6741AA360E40068C92B /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A12ACA491AA34B2400FCAB8D /* ObjectMapper.framework */; };
 		A1F4E6751AA360E40068C92B /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A12ACA491AA34B2400FCAB8D /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A1F4E67C1AA386950068C92B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F4E67B1AA386950068C92B /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +135,7 @@
 		A132173F1AA29032007159C6 /* EntityWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityWebService.swift; sourceTree = "<group>"; };
 		A13217421AA29908007159C6 /* AFHTTPSessionManager+RACExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AFHTTPSessionManager+RACExtensions.swift"; sourceTree = "<group>"; };
 		A1A4A68E1AA2B48A00989804 /* RACSignal+Mappings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RACSignal+Mappings.swift"; sourceTree = "<group>"; };
+		A1F4E67B1AA386950068C92B /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		A458BB2FC592F4A96251131B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C3537E968B83FC3AC8EC75D4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,7 +147,6 @@
 			files = (
 				A12ACA4C1AA34B5300FCAB8D /* ObjectMapper.framework in Frameworks */,
 				115FDF161AA273AD00F1D6C1 /* CoreLocation.framework in Frameworks */,
-				A1F4E6741AA360E40068C92B /* ObjectMapper.framework in Frameworks */,
 				11AA659F1AA25912004DA34B /* MapKit.framework in Frameworks */,
 				24F22093CF1A124AC1182792 /* libPods.a in Frameworks */,
 			);
@@ -198,9 +198,9 @@
 				A13217331AA28475007159C6 /* Models */,
 				A13217301AA25717007159C6 /* Services */,
 				11AA657C1AA24BD8004DA34B /* AppDelegate.swift */,
-				1180B34F1AA27E5100746875 /* ImagePickerController.swift */,
 				A1538BE31AA33E4C00B10851 /* Discover */,
 				1180B3511AA2826000746875 /* ImagePickerViewModel.swift */,
+				1180B34F1AA27E5100746875 /* ImagePickerController.swift */,
 				A111FE5B1AA2EA54009F55CB /* Send Submission */,
 				11AA65821AA24BD8004DA34B /* Main.storyboard */,
 				A111FE4C1AA2DA88009F55CB /* Categories */,
@@ -305,6 +305,7 @@
 			children = (
 				A132173A1AA28CF9007159C6 /* Transformers */,
 				A13217341AA28486007159C6 /* Submission.swift */,
+				A1F4E67B1AA386950068C92B /* Category.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -373,7 +374,7 @@
 		11AA656F1AA24BD8004DA34B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Bureau of Street Services";
 				TargetAttributes = {
 					11AA65761AA24BD8004DA34B = {
@@ -501,6 +502,7 @@
 				11D415B61AA290A3007C1E09 /* LocationService.swift in Sources */,
 				A111FE681AA2EACE009F55CB /* SubmissionPhotoViewCell.swift in Sources */,
 				A111FE581AA2DDD5009F55CB /* CategoriesService.swift in Sources */,
+				A1F4E67C1AA386950068C92B /* Category.swift in Sources */,
 				11D415B11AA2908E007C1E09 /* ImagePickerController.swift in Sources */,
 				1180B3521AA2826000746875 /* ImagePickerViewModel.swift in Sources */,
 				A1A4A68F1AA2B48A00989804 /* RACSignal+Mappings.swift in Sources */,

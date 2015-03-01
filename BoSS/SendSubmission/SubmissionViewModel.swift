@@ -29,14 +29,11 @@ class SubmissionViewModel {
         }
     }
     
-    internal var category: String {
-        set {
-            model.category = newValue
-        }
-        get {
-            return model.category
-        }
+    internal var categoryName: String {
+        return category.name
     }
+    
+    internal var category: Category
     
     internal var donation: Double {
         set {
@@ -77,6 +74,7 @@ class SubmissionViewModel {
         self.submissionsService = submissionsService
         
         model = Submission()
+        category = Category.defaultCategory()
         model.photo = image
         
         locationService.currentLocation().subscribeNext { [weak self] (location) -> Void in

@@ -9,7 +9,6 @@
 import Foundation
 import AFNetworking
 import ReactiveCocoa
-import AFNetworking_RACExtensions
 
 
 class EntityWebService {

@@ -79,7 +79,7 @@ class SubmissionViewModel {
         model = Submission()
         model.photo = image
         
-        locationService.currentLocation().take(1).subscribeNext { [weak self] (location) -> Void in
+        locationService.currentLocation().subscribeNext { [weak self] (location) -> Void in
             if let location = location as? CLLocation {
                 self?.location = location
             }

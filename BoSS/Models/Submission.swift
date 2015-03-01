@@ -13,7 +13,8 @@ import ObjectMapper
 class Submission: Mappable {
     
     // MARK: - Properties
-    
+
+    var photo: UIImage?
     var photoURL: NSURL!
     var location: CLLocation!
     var donation: Double!

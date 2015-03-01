@@ -28,7 +28,7 @@ class EntityWebService {
         let fileName = prefix(NSUUID().UUIDString, 16)
         
         return sessionManager.rac_POST("containers/bossimg/upload", constructingBody: { (multipartFormData) in
-            let imageData = UIImageJPEGRepresentation(image, 0.1)
+            let imageData = UIImageJPEGRepresentation(image, 0.8)
             multipartFormData.appendPartWithFileData(imageData, name: "image", fileName: fileName, mimeType: "image/jpg")
         }).map { (x) -> AnyObject! in
             return NSURL(string: "containers/bossimg/\(fileName)", relativeToURL: baseURL)

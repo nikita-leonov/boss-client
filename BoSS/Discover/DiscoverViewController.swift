@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import MapKit
 
 class DiscoverViewController: UIViewController {
     @IBOutlet internal var snap: UIButton!
@@ -44,6 +45,14 @@ class DiscoverViewController: UIViewController {
                 return RACDisposable {}
             })
         })
+    }
+}
+
+extension DiscoverViewController: MKMapViewDelegate {
+    func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
+        var span = MKCoordinateSpanMake(0.01, 0.01)
+        var region = MKCoordinateRegionMake(userLocation.location.coordinate, span)
+        mapView.setRegion(region, animated: true)
     }
 }
 

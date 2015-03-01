@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import ReactiveCocoa
 import ObjectMapper
 
 class SubmissionsService: EntityWebService, SubmissionsServiceProtocol {

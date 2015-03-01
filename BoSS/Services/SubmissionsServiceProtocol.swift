@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import ReactiveCocoa
 
 protocol SubmissionsServiceProtocol: BaseServiceProtocol {
     

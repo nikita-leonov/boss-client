@@ -7,8 +7,6 @@
 //
 
 import Foundation
-import AFNetworking
-import ReactiveCocoa
 
 extension AFHTTPSessionManager {
     

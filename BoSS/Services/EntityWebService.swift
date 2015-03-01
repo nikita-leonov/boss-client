@@ -7,9 +7,6 @@
 //
 
 import Foundation
-import AFNetworking
-import ReactiveCocoa
-
 
 class EntityWebService {
     

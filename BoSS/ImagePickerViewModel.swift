@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import ReactiveCocoa
 
 class ImagePickerViewModel {
     private var _imageSelected: RACSignal?

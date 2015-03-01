@@ -69,8 +69,10 @@
                                 <segment title="List"/>
                             </segments>
                         </segmentedControl>
+                        <barButtonItem key="rightBarButtonItem" title="Signup" id="B37-PS-nFf"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="signup" destination="B37-PS-nFf" id="fqI-Ga-0Lb"/>
                         <outlet property="snap" destination="cUE-YN-nL8" id="Zoz-9r-gj2"/>
                     </connections>
                 </viewController>

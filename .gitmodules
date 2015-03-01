@@ -1,0 +1,6 @@
+[submodule "braintree-swift"]
+	path = braintree-swift
+	url = https://github.com/mickeyreiss/braintree-swift
+[submodule "ObjectMapper"]
+	path = ObjectMapper
+	url = https://github.com/Hearst-DD/ObjectMapper

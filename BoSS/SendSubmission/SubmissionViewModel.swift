@@ -8,7 +8,6 @@
 
 import Foundation
 import CoreLocation
-import ReactiveCocoa
 
 class SubmissionViewModel {
     

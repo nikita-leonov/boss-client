@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ServiceLocator.registerService(locationService)
         
         let sessionManager = AFHTTPSessionManager(baseURL: baseURL)
+        sessionManager.requestSerializer = AFJSONRequestSerializer()
         let submissionsService = SubmissionsService(sessionManager: sessionManager)
         ServiceLocator.registerService(submissionsService as SubmissionsServiceProtocol)
         ServiceLocator.registerService(CategoriesService() as CategoriesServiceProtocol)

@@ -48,11 +48,17 @@ class SubmissionViewModel {
         }
     }
     
-    internal lazy var submit: RACCommand = RACCommand(enabled: self.enabled()) { [weak self] _ in
+    internal lazy var submit: RACCommand = RACCommand { [weak self] _ in
         var result = RACSignal.empty()
         
-        if let strongSelf = self {
-            result = strongSelf.submissionsService.create(strongSelf.model)
+        if let submissionsService = self?.submissionsService, photo = self?.photo, model = self?.model {
+            result = submissionsService.upload(photo).doNext { (x) in
+                if let URL = x as? NSURL {
+                    model.photoURL = URL
+                }
+            }.flattenMap { _ in
+                return submissionsService.create(model)
+            }
         }
         
         return result
@@ -76,10 +82,6 @@ class SubmissionViewModel {
                 self?.location = location
             }
         }
-    }
-    
-    private func enabled() -> RACSignal {
-        return RACSignal.`return`(true)
     }
     
 }

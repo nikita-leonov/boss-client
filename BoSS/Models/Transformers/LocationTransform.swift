@@ -13,7 +13,7 @@ import ObjectMapper
 class LocationTransform: TransformType {
     
     typealias Object = CLLocation
-    typealias JSON = String
+    typealias JSON = [String: Double]
     
     private let latitudeKey = "lat"
     private let longitudeKey = "lng"
@@ -37,7 +37,7 @@ class LocationTransform: TransformType {
         var result: JSON?
         
         if let coordinate = value?.coordinate {
-            result = "{\(latitudeKey): \(coordinate.latitude), \(longitudeKey): \(coordinate.longitude)}"
+            result = [latitudeKey: coordinate.latitude, longitudeKey: coordinate.longitude]
         }
         
         return result

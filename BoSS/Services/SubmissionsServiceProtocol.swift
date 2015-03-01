@@ -13,6 +13,8 @@ protocol SubmissionsServiceProtocol: BaseServiceProtocol {
     
     func submissions() -> RACSignal
     
+    func upload(image: UIImage) -> RACSignal
+    
     func create(submission: Submission) -> RACSignal
     
 }

@@ -23,6 +23,18 @@ class EntityWebService {
         return sessionManager.rac_GET(path, parameters: parameters)
     }
     
+    internal func upload(image: UIImage) -> RACSignal {
+        let baseURL = sessionManager.baseURL
+        let fileName = prefix(NSUUID().UUIDString, 16)
+        
+        return sessionManager.rac_POST("containers/bossimg/upload", constructingBody: { (multipartFormData) in
+            let imageData = UIImageJPEGRepresentation(image, 0.1)
+            multipartFormData.appendPartWithFileData(imageData, name: "image", fileName: fileName, mimeType: "image/jpg")
+        }).map { (x) -> AnyObject! in
+            return NSURL(string: "containers/bossimg/\(fileName)", relativeToURL: baseURL)
+        }
+    }
+    
     internal func create(path: String, parameters: AnyObject? = nil, page: [String: String]? = nil) -> RACSignal {
         return sessionManager.rac_POST(path, parameters: parameters)
     }

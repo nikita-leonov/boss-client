@@ -30,12 +30,21 @@ class SubmissionViewModel {
         }
     }
     
-    internal var category: String? {
+    internal var category: String {
         set {
             model.category = newValue
         }
         get {
             return model.category
+        }
+    }
+    
+    internal var donation: Double {
+        set {
+            model.donation = newValue
+        }
+        get {
+            return model.donation
         }
     }
     

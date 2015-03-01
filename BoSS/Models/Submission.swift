@@ -17,14 +17,13 @@ class Submission: Mappable {
     var photo: UIImage?
     var photoURL: NSURL!
     var location: CLLocation?
-    var donation: Double!
-    var category: String!
+    var donation: Double! = 0
+    var category: String! = "POTHOLE"
     var identifier: String!
     
     // MARK: - Initializing a Submission Model
     
     required init() {
-        category = "ANIMAL CONTROL"
     }
     
     func mapping(map: Map) {

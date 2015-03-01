@@ -81,11 +81,28 @@
         <!--Report Issue-->
         <scene sceneID="Mae-AX-r8e">
             <objects>
-                <tableViewController storyboardIdentifier="submissionViewController" id="clA-mD-cxv" customClass="SubmissionViewController" customModule="BoSS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="submissionViewController" title="Report Issue" id="clA-mD-cxv" customClass="SubmissionViewController" customModule="BoSS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="uG3-3p-hwP">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="daf-Ma-36Z" userLabel="Footer">
+                            <rect key="frame" x="0.0" y="498" width="600" height="60"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ad-I6-jak">
+                                    <rect key="frame" x="271" y="15" width="58" height="30"/>
+                                    <state key="normal" title="SUBMIT">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="centerX" secondItem="0Ad-I6-jak" secondAttribute="centerX" id="Dgg-Lm-uuw"/>
+                                <constraint firstAttribute="centerY" secondItem="0Ad-I6-jak" secondAttribute="centerY" id="MQJ-cs-htr"/>
+                            </constraints>
+                        </view>
                         <sections>
                             <tableViewSection id="JlH-ci-Rbl">
                                 <cells>
@@ -181,7 +198,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="vrG-8p-puK">
+                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="vrG-8p-puK">
                                                     <rect key="frame" x="498" y="36" width="94" height="29"/>
                                                 </stepper>
                                             </subviews>
@@ -207,7 +224,9 @@
                             <outlet property="delegate" destination="clA-mD-cxv" id="rVW-RX-Q1D"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Report Issue" id="dni-ej-Klc"/>
+                    <connections>
+                        <outlet property="submit" destination="0Ad-I6-jak" id="S0q-q1-tFG"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fP2-x1-0J3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -216,7 +235,7 @@
         <!--Categories-->
         <scene sceneID="i5B-se-aiC">
             <objects>
-                <tableViewController id="r9Y-Wn-ffr" customClass="CategoriesViewController" customModule="BoSS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Categories" id="r9Y-Wn-ffr" customClass="CategoriesViewController" customModule="BoSS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="104" sectionHeaderHeight="22" sectionFooterHeight="22" id="YLj-wv-bIb">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -245,7 +264,6 @@
                             <outlet property="delegate" destination="r9Y-Wn-ffr" id="VMJ-I1-Yvc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Categories" id="Udd-5a-Vxi"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pAz-9l-5Uu" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="4JY-k1-Ggz" userLabel="Exit" sceneMemberID="exit"/>

@@ -16,6 +16,12 @@ extension AFHTTPSessionManager {
         return rac_requestPath(path, paramters: parameters, withMethod: "GET")
     }
     
+    internal func rac_POST(path: String, parameters: AnyObject? = nil) -> RACSignal {
+        return rac_requestPath(path, paramters: parameters, withMethod: "POST")
+    }
+    
+    // MARK: - Implementation
+    
     private func rac_requestPath(path: String, paramters: AnyObject? = nil, withMethod method: String) -> RACSignal {
         return RACSignal.createSignal { [weak self] (subscriber) -> RACDisposable! in
             var result = RACDisposable {}
@@ -40,7 +46,7 @@ extension AFHTTPSessionManager {
             }
             
             return result
-        }
+        }.replayLazily()
     }
     
 }

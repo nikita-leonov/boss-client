@@ -10,15 +10,30 @@ import UIKit
 
 class SubmissionViewController: UITableViewController {
     
+    // MARK: - Properties
+    
     internal var viewModel: SubmissionViewModel!
     
+    @IBOutlet private weak var submit: UIButton!
+    
     private let ShowCategoriesSegueIdentifier = "ShowCategoriesSegueIdentifier"
+    
+    // MARK: - Managing View Events
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        submit.rac_command = viewModel.submit
+    }
+    
+    // MARK: - Table View Data Source
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let result = super.tableView(tableView, cellForRowAtIndexPath: indexPath) as! SubmissionCell
         result.setViewModel(viewModel)
         return result as! UITableViewCell
     }
+    
+    // MARK: - Interacting with Storyboards
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == ShowCategoriesSegueIdentifier {

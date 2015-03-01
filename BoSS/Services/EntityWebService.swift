@@ -23,4 +23,8 @@ class EntityWebService {
         return sessionManager.rac_GET(path, parameters: parameters)
     }
     
+    internal func create(path: String, parameters: AnyObject? = nil, page: [String: String]? = nil) -> RACSignal {
+        return sessionManager.rac_POST(path, parameters: parameters)
+    }
+    
 }

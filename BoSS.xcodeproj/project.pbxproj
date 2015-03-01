@@ -18,6 +18,9 @@
 		A13217321AA2572C007159C6 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13217311AA2572C007159C6 /* ServiceLocator.swift */; };
 		A13217351AA28486007159C6 /* Submission.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13217341AA28486007159C6 /* Submission.swift */; };
 		A13217371AA289ED007159C6 /* LocationTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13217361AA289ED007159C6 /* LocationTransform.swift */; };
+		A132173C1AA28FB8007159C6 /* SubmissionsServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A132173B1AA28FB8007159C6 /* SubmissionsServiceProtocol.swift */; };
+		A132173E1AA28FC1007159C6 /* SubmissionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A132173D1AA28FC1007159C6 /* SubmissionsService.swift */; };
+		A13217401AA29032007159C6 /* EntityWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A132173F1AA29032007159C6 /* EntityWebService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		A13217311AA2572C007159C6 /* ServiceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		A13217341AA28486007159C6 /* Submission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Submission.swift; sourceTree = "<group>"; };
 		A13217361AA289ED007159C6 /* LocationTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTransform.swift; sourceTree = "<group>"; };
+		A132173B1AA28FB8007159C6 /* SubmissionsServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmissionsServiceProtocol.swift; sourceTree = "<group>"; };
+		A132173D1AA28FC1007159C6 /* SubmissionsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmissionsService.swift; sourceTree = "<group>"; };
+		A132173F1AA29032007159C6 /* EntityWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityWebService.swift; sourceTree = "<group>"; };
 		A458BB2FC592F4A96251131B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C3537E968B83FC3AC8EC75D4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,7 +156,10 @@
 		A13217301AA25717007159C6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A132173F1AA29032007159C6 /* EntityWebService.swift */,
 				A13217311AA2572C007159C6 /* ServiceLocator.swift */,
+				A132173B1AA28FB8007159C6 /* SubmissionsServiceProtocol.swift */,
+				A132173D1AA28FC1007159C6 /* SubmissionsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -326,9 +335,12 @@
 				A13217351AA28486007159C6 /* Submission.swift in Sources */,
 				A13217321AA2572C007159C6 /* ServiceLocator.swift in Sources */,
 				11AA65811AA24BD8004DA34B /* SecondViewController.swift in Sources */,
+				A132173E1AA28FC1007159C6 /* SubmissionsService.swift in Sources */,
 				11AA657D1AA24BD8004DA34B /* AppDelegate.swift in Sources */,
 				11AA657F1AA24BD8004DA34B /* FirstViewController.swift in Sources */,
+				A13217401AA29032007159C6 /* EntityWebService.swift in Sources */,
 				A13217371AA289ED007159C6 /* LocationTransform.swift in Sources */,
+				A132173C1AA28FB8007159C6 /* SubmissionsServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,4 +7,26 @@
 //
 
 import Foundation
+import ReactiveCocoa
 
+class ImagePickerViewModel {
+    private var _imageSelected: RACSignal?
+    internal var imageSelected: RACSignal? {
+        set {
+            _imageSelected = newValue?.map({ (imageInfo) -> AnyObject! in
+                var result: UIImage!
+                
+                if let imageInfo = imageInfo as? [String: AnyObject] {
+                    result = imageInfo[UIImagePickerControllerOriginalImage] as? UIImage
+                }
+                
+                return result
+            })
+
+            //TODO: Upload etc
+        }
+        get {
+            return _imageSelected
+        }
+    }
+}

@@ -9,15 +9,9 @@
 import Foundation
 
 class ImagePickerController: UIImagePickerController {
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
-    override init() {
-        super.init()
-    }
-    
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    var viewModel: ImagePickerViewModel! {
+        didSet {
+            viewModel.imageSelected = rac_imageSelectedSignal()
+        }
     }
 }

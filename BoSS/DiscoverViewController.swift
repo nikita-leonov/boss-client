@@ -20,8 +20,16 @@ class DiscoverViewController: UIViewController {
         snap.rac_command = RACCommand(signalBlock: { [weak self] (value) -> RACSignal! in
             RACSignal.createSignal({ [weak self] (subscriber) -> RACDisposable! in
                 if let strongSelf = self {
+                    let viewModel = ImagePickerViewModel()
                     let imagePickerController: ImagePickerController = ImagePickerController()
+                    imagePickerController.viewModel = viewModel
                     
+                    viewModel.imageSelected!.subscribeNext { (image) -> Void in
+                        if let image = image as? UIImage {
+                            //TODO: Move to submit form
+                        }
+                    }
+
                     strongSelf.navigationController!.presentViewController(imagePickerController, animated: true, completion: { [weak subscriber] _ in
                         _ = subscriber?.sendCompleted()
                     })

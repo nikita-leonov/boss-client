@@ -21,6 +21,7 @@ class DiscoverViewController: UIViewController {
                 if let strongSelf = self {
                     let viewModel = ImagePickerViewModel()
                     let imagePickerController: ImagePickerController = ImagePickerController()
+                    imagePickerController.sourceType = UIImagePickerController.isSourceTypeAvailable(.Camera) ? .Camera : .PhotoLibrary
                     imagePickerController.viewModel = viewModel
                     
                     viewModel.imageSelected!.subscribeNext({ (image) -> Void in

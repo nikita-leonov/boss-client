@@ -109,13 +109,13 @@
                         <sections>
                             <tableViewSection id="JlH-ci-Rbl">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="6cq-iM-o50" customClass="SubmissionPhotoViewCell" customModule="BoSS" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="320" id="6cq-iM-o50" customClass="SubmissionPhotoViewCell" customModule="BoSS" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6cq-iM-o50" id="agI-zu-Rma">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kMd-ET-gs4">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kMd-ET-gs4">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="319"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>

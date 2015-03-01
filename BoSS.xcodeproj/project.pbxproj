@@ -8,11 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		115FDF161AA273AD00F1D6C1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115FDF151AA273AD00F1D6C1 /* CoreLocation.framework */; };
-		115FDF191AA2759400F1D6C1 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115FDF181AA2759400F1D6C1 /* LocationService.swift */; };
-		115FDF1B1AA275A000F1D6C1 /* BaseServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115FDF1A1AA275A000F1D6C1 /* BaseServiceProtocol.swift */; };
-		1180B3501AA27E5100746875 /* ImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1180B34F1AA27E5100746875 /* ImagePickerController.swift */; };
 		1180B3521AA2826000746875 /* ImagePickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1180B3511AA2826000746875 /* ImagePickerViewModel.swift */; };
-		11A1000F1AA2773D00C728D7 /* LocationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A1000E1AA2773D00C728D7 /* LocationServiceProtocol.swift */; };
 		11AA657D1AA24BD8004DA34B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA657C1AA24BD8004DA34B /* AppDelegate.swift */; };
 		11AA657F1AA24BD8004DA34B /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA657E1AA24BD8004DA34B /* DiscoverViewController.swift */; };
 		11AA65841AA24BD8004DA34B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11AA65821AA24BD8004DA34B /* Main.storyboard */; };
@@ -20,8 +16,14 @@
 		11AA65891AA24BD8004DA34B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11AA65871AA24BD8004DA34B /* LaunchScreen.xib */; };
 		11AA65951AA24BD8004DA34B /* BoSSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA65941AA24BD8004DA34B /* BoSSTests.swift */; };
 		11AA659F1AA25912004DA34B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AA659E1AA25912004DA34B /* MapKit.framework */; };
+		11D415B11AA2908E007C1E09 /* ImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1180B34F1AA27E5100746875 /* ImagePickerController.swift */; };
+		11D415B51AA290A3007C1E09 /* BaseServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D415B21AA290A3007C1E09 /* BaseServiceProtocol.swift */; };
+		11D415B61AA290A3007C1E09 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D415B31AA290A3007C1E09 /* LocationService.swift */; };
+		11D415B71AA290A3007C1E09 /* LocationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D415B41AA290A3007C1E09 /* LocationServiceProtocol.swift */; };
 		393063DC3811C1A69FD9E964 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC8897B6A4D1A2C59F7007D /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A13217321AA2572C007159C6 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13217311AA2572C007159C6 /* ServiceLocator.swift */; };
+		A13217351AA28486007159C6 /* Submission.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13217341AA28486007159C6 /* Submission.swift */; };
+		A13217371AA289ED007159C6 /* LocationTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13217361AA289ED007159C6 /* LocationTransform.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,13 +38,9 @@
 
 /* Begin PBXFileReference section */
 		115FDF151AA273AD00F1D6C1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		115FDF181AA2759400F1D6C1 /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationService.swift; path = Services/LocationService.swift; sourceTree = "<group>"; };
-		115FDF1A1AA275A000F1D6C1 /* BaseServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseServiceProtocol.swift; path = Services/BaseServiceProtocol.swift; sourceTree = "<group>"; };
 		1180B34F1AA27E5100746875 /* ImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerController.swift; sourceTree = "<group>"; };
 		1180B3511AA2826000746875 /* ImagePickerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerViewModel.swift; sourceTree = "<group>"; };
-		11A1000E1AA2773D00C728D7 /* LocationServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationServiceProtocol.swift; path = Services/LocationServiceProtocol.swift; sourceTree = "<group>"; };
 		11AA65771AA24BD8004DA34B /* BoSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoSS.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		11AA657B1AA24BD8004DA34B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11AA657C1AA24BD8004DA34B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11AA657E1AA24BD8004DA34B /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		11AA65831AA24BD8004DA34B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -52,9 +50,13 @@
 		11AA65931AA24BD8004DA34B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11AA65941AA24BD8004DA34B /* BoSSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoSSTests.swift; sourceTree = "<group>"; };
 		11AA659E1AA25912004DA34B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		11AA65A01AA26A61004DA34B /* BoSS-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BoSS-Bridging-Header.h"; sourceTree = "<group>"; };
+		11D415B21AA290A3007C1E09 /* BaseServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseServiceProtocol.swift; sourceTree = "<group>"; };
+		11D415B31AA290A3007C1E09 /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		11D415B41AA290A3007C1E09 /* LocationServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationServiceProtocol.swift; sourceTree = "<group>"; };
 		9AC8897B6A4D1A2C59F7007D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A13217311AA2572C007159C6 /* ServiceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceLocator.swift; path = Services/ServiceLocator.swift; sourceTree = "<group>"; };
+		A13217311AA2572C007159C6 /* ServiceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
+		A13217341AA28486007159C6 /* Submission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Submission.swift; sourceTree = "<group>"; };
+		A13217361AA289ED007159C6 /* LocationTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTransform.swift; sourceTree = "<group>"; };
 		A458BB2FC592F4A96251131B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C3537E968B83FC3AC8EC75D4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,17 +91,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		115FDF171AA2756200F1D6C1 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				A13217311AA2572C007159C6 /* ServiceLocator.swift */,
-				11A1000E1AA2773D00C728D7 /* LocationServiceProtocol.swift */,
-				115FDF181AA2759400F1D6C1 /* LocationService.swift */,
-				115FDF1A1AA275A000F1D6C1 /* BaseServiceProtocol.swift */,
-			);
-			name = Services;
-			sourceTree = "<group>";
-		};
 		11AA656E1AA24BD8004DA34B = {
 			isa = PBXGroup;
 			children = (
@@ -123,8 +114,8 @@
 		11AA65791AA24BD8004DA34B /* BoSS */ = {
 			isa = PBXGroup;
 			children = (
-				115FDF171AA2756200F1D6C1 /* Services */,
-				11AA657A1AA24BD8004DA34B /* Supporting Files */,
+				A13217331AA28475007159C6 /* Models */,
+				A13217301AA25717007159C6 /* Services */,
 				11AA657C1AA24BD8004DA34B /* AppDelegate.swift */,
 				11AA657E1AA24BD8004DA34B /* DiscoverViewController.swift */,
 				1180B34F1AA27E5100746875 /* ImagePickerController.swift */,
@@ -134,15 +125,6 @@
 				11AA65871AA24BD8004DA34B /* LaunchScreen.xib */,
 			);
 			path = BoSS;
-			sourceTree = "<group>";
-		};
-		11AA657A1AA24BD8004DA34B /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				11AA65A01AA26A61004DA34B /* BoSS-Bridging-Header.h */,
-				11AA657B1AA24BD8004DA34B /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		11AA65911AA24BD8004DA34B /* BoSSTests */ = {
@@ -170,6 +152,34 @@
 				9AC8897B6A4D1A2C59F7007D /* Pods.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A13217301AA25717007159C6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A13217311AA2572C007159C6 /* ServiceLocator.swift */,
+				11D415B21AA290A3007C1E09 /* BaseServiceProtocol.swift */,
+				11D415B31AA290A3007C1E09 /* LocationService.swift */,
+				11D415B41AA290A3007C1E09 /* LocationServiceProtocol.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A13217331AA28475007159C6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A132173A1AA28CF9007159C6 /* Transformers */,
+				A13217341AA28486007159C6 /* Submission.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A132173A1AA28CF9007159C6 /* Transformers */ = {
+			isa = PBXGroup;
+			children = (
+				A13217361AA289ED007159C6 /* LocationTransform.swift */,
+			);
+			path = Transformers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,14 +338,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A13217351AA28486007159C6 /* Submission.swift in Sources */,
+				11D415B71AA290A3007C1E09 /* LocationServiceProtocol.swift in Sources */,
 				A13217321AA2572C007159C6 /* ServiceLocator.swift in Sources */,
-				115FDF1B1AA275A000F1D6C1 /* BaseServiceProtocol.swift in Sources */,
+				11D415B61AA290A3007C1E09 /* LocationService.swift in Sources */,
+				11D415B11AA2908E007C1E09 /* ImagePickerController.swift in Sources */,
 				1180B3521AA2826000746875 /* ImagePickerViewModel.swift in Sources */,
 				11AA657D1AA24BD8004DA34B /* AppDelegate.swift in Sources */,
-				115FDF191AA2759400F1D6C1 /* LocationService.swift in Sources */,
-				11A1000F1AA2773D00C728D7 /* LocationServiceProtocol.swift in Sources */,
-				1180B3501AA27E5100746875 /* ImagePickerController.swift in Sources */,
+				11D415B51AA290A3007C1E09 /* BaseServiceProtocol.swift in Sources */,
 				11AA657F1AA24BD8004DA34B /* DiscoverViewController.swift in Sources */,
+				A13217371AA289ED007159C6 /* LocationTransform.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

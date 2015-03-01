@@ -8,11 +8,14 @@
 
 import Foundation
 import ReactiveCocoa
+import ObjectMapper
 
 class SubmissionsService: EntityWebService, SubmissionsServiceProtocol {
     
-    func submissions() -> RACSignal? {
-        return read("submissions", parameters: nil, page: nil)
+    func submissions() -> RACSignal {
+        return read("submissions", parameters: nil, page: nil).mapResponses { (submissions: [Submission]) in
+            return submissions
+        }
     }
     
 }

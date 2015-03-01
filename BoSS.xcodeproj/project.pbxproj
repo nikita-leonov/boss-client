@@ -34,6 +34,7 @@
 		A13217401AA29032007159C6 /* EntityWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A132173F1AA29032007159C6 /* EntityWebService.swift */; };
 		A13217431AA29908007159C6 /* AFHTTPSessionManager+RACExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13217421AA29908007159C6 /* AFHTTPSessionManager+RACExtensions.swift */; };
 		A13217441AA29E36007159C6 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA657E1AA24BD8004DA34B /* DiscoverViewController.swift */; };
+		A1A4A68F1AA2B48A00989804 /* RACSignal+Mappings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A4A68E1AA2B48A00989804 /* RACSignal+Mappings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		A132173D1AA28FC1007159C6 /* SubmissionsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmissionsService.swift; sourceTree = "<group>"; };
 		A132173F1AA29032007159C6 /* EntityWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityWebService.swift; sourceTree = "<group>"; };
 		A13217421AA29908007159C6 /* AFHTTPSessionManager+RACExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AFHTTPSessionManager+RACExtensions.swift"; sourceTree = "<group>"; };
+		A1A4A68E1AA2B48A00989804 /* RACSignal+Mappings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RACSignal+Mappings.swift"; sourceTree = "<group>"; };
 		A458BB2FC592F4A96251131B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C3537E968B83FC3AC8EC75D4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -191,6 +193,7 @@
 				A132173B1AA28FB8007159C6 /* SubmissionsServiceProtocol.swift */,
 				A132173D1AA28FC1007159C6 /* SubmissionsService.swift */,
 				A13217421AA29908007159C6 /* AFHTTPSessionManager+RACExtensions.swift */,
+				A1A4A68E1AA2B48A00989804 /* RACSignal+Mappings.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				11D415B61AA290A3007C1E09 /* LocationService.swift in Sources */,
 				11D415B11AA2908E007C1E09 /* ImagePickerController.swift in Sources */,
 				1180B3521AA2826000746875 /* ImagePickerViewModel.swift in Sources */,
+				A1A4A68F1AA2B48A00989804 /* RACSignal+Mappings.swift in Sources */,
 				A132173E1AA28FC1007159C6 /* SubmissionsService.swift in Sources */,
 				11AA657D1AA24BD8004DA34B /* AppDelegate.swift in Sources */,
 				11D415B91AA291D4007C1E09 /* SubmissionViewController.swift in Sources */,

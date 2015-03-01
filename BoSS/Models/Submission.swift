@@ -29,7 +29,7 @@ class Submission: Mappable {
         photoURL <- (map["photoURL"], URLTransform())
         location <- (map["location"], LocationTransform())
         donation <- map["donation"]
-        identifier <- map["identifier"]
+        identifier <- map["id"]
     }
     
 }

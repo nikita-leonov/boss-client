@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import ReactiveCocoa
 
 class ImagePickerController: UIImagePickerController {
     var viewModel: ImagePickerViewModel! {

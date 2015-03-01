@@ -10,7 +10,6 @@
 		115FDF161AA273AD00F1D6C1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115FDF151AA273AD00F1D6C1 /* CoreLocation.framework */; };
 		1180B3521AA2826000746875 /* ImagePickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1180B3511AA2826000746875 /* ImagePickerViewModel.swift */; };
 		11AA657D1AA24BD8004DA34B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA657C1AA24BD8004DA34B /* AppDelegate.swift */; };
-		11AA657F1AA24BD8004DA34B /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA657E1AA24BD8004DA34B /* DiscoverViewController.swift */; };
 		11AA65841AA24BD8004DA34B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11AA65821AA24BD8004DA34B /* Main.storyboard */; };
 		11AA65861AA24BD8004DA34B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11AA65851AA24BD8004DA34B /* Images.xcassets */; };
 		11AA65891AA24BD8004DA34B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11AA65871AA24BD8004DA34B /* LaunchScreen.xib */; };
@@ -30,6 +29,11 @@
 		A13217321AA2572C007159C6 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13217311AA2572C007159C6 /* ServiceLocator.swift */; };
 		A13217351AA28486007159C6 /* Submission.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13217341AA28486007159C6 /* Submission.swift */; };
 		A13217371AA289ED007159C6 /* LocationTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13217361AA289ED007159C6 /* LocationTransform.swift */; };
+		A132173C1AA28FB8007159C6 /* SubmissionsServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A132173B1AA28FB8007159C6 /* SubmissionsServiceProtocol.swift */; };
+		A132173E1AA28FC1007159C6 /* SubmissionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A132173D1AA28FC1007159C6 /* SubmissionsService.swift */; };
+		A13217401AA29032007159C6 /* EntityWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A132173F1AA29032007159C6 /* EntityWebService.swift */; };
+		A13217431AA29908007159C6 /* AFHTTPSessionManager+RACExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13217421AA29908007159C6 /* AFHTTPSessionManager+RACExtensions.swift */; };
+		A13217441AA29E36007159C6 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA657E1AA24BD8004DA34B /* DiscoverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,10 @@
 		A13217311AA2572C007159C6 /* ServiceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		A13217341AA28486007159C6 /* Submission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Submission.swift; sourceTree = "<group>"; };
 		A13217361AA289ED007159C6 /* LocationTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTransform.swift; sourceTree = "<group>"; };
+		A132173B1AA28FB8007159C6 /* SubmissionsServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmissionsServiceProtocol.swift; sourceTree = "<group>"; };
+		A132173D1AA28FC1007159C6 /* SubmissionsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmissionsService.swift; sourceTree = "<group>"; };
+		A132173F1AA29032007159C6 /* EntityWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityWebService.swift; sourceTree = "<group>"; };
+		A13217421AA29908007159C6 /* AFHTTPSessionManager+RACExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AFHTTPSessionManager+RACExtensions.swift"; sourceTree = "<group>"; };
 		A458BB2FC592F4A96251131B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C3537E968B83FC3AC8EC75D4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -175,10 +183,14 @@
 		A13217301AA25717007159C6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A132173F1AA29032007159C6 /* EntityWebService.swift */,
 				A13217311AA2572C007159C6 /* ServiceLocator.swift */,
 				11D415B21AA290A3007C1E09 /* BaseServiceProtocol.swift */,
 				11D415B31AA290A3007C1E09 /* LocationService.swift */,
 				11D415B41AA290A3007C1E09 /* LocationServiceProtocol.swift */,
+				A132173B1AA28FB8007159C6 /* SubmissionsServiceProtocol.swift */,
+				A132173D1AA28FC1007159C6 /* SubmissionsService.swift */,
+				A13217421AA29908007159C6 /* AFHTTPSessionManager+RACExtensions.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -366,12 +378,17 @@
 				11D415B61AA290A3007C1E09 /* LocationService.swift in Sources */,
 				11D415B11AA2908E007C1E09 /* ImagePickerController.swift in Sources */,
 				1180B3521AA2826000746875 /* ImagePickerViewModel.swift in Sources */,
+				A132173E1AA28FC1007159C6 /* SubmissionsService.swift in Sources */,
 				11AA657D1AA24BD8004DA34B /* AppDelegate.swift in Sources */,
 				11D415B91AA291D4007C1E09 /* SubmissionViewController.swift in Sources */,
+				A13217431AA29908007159C6 /* AFHTTPSessionManager+RACExtensions.swift in Sources */,
+				A13217441AA29E36007159C6 /* DiscoverViewController.swift in Sources */,
 				11D415B51AA290A3007C1E09 /* BaseServiceProtocol.swift in Sources */,
 				11AA657F1AA24BD8004DA34B /* DiscoverViewController.swift in Sources */,
 				11D415C11AA2A06D007C1E09 /* SubmissionMapViewCell.swift in Sources */,
+				A13217401AA29032007159C6 /* EntityWebService.swift in Sources */,
 				A13217371AA289ED007159C6 /* LocationTransform.swift in Sources */,
+				A132173C1AA28FB8007159C6 /* SubmissionsServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,7 +515,6 @@
 				INFOPLIST_FILE = BoSS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "./BoSS/BoSS-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -510,7 +526,6 @@
 				INFOPLIST_FILE = BoSS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "./BoSS/BoSS-Bridging-Header.h";
 			};
 			name = Release;
 		};

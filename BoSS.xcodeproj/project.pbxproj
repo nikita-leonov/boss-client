@@ -43,9 +43,6 @@
 		A13217401AA29032007159C6 /* EntityWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A132173F1AA29032007159C6 /* EntityWebService.swift */; };
 		A13217431AA29908007159C6 /* AFHTTPSessionManager+RACExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13217421AA29908007159C6 /* AFHTTPSessionManager+RACExtensions.swift */; };
 		A13217441AA29E36007159C6 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA657E1AA24BD8004DA34B /* DiscoverViewController.swift */; };
-		A1538BDE1AA33D6E00B10851 /* AccessServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1538BDD1AA33D6E00B10851 /* AccessServiceProtocol.swift */; };
-		A1538BE01AA33D9900B10851 /* AccessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1538BDF1AA33D9900B10851 /* AccessService.swift */; };
-		A1538BE21AA33E3F00B10851 /* DiscoverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1538BE11AA33E3F00B10851 /* DiscoverViewModel.swift */; };
 		A1A4A68F1AA2B48A00989804 /* RACSignal+Mappings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A4A68E1AA2B48A00989804 /* RACSignal+Mappings.swift */; };
 /* End PBXBuildFile section */
 
@@ -114,9 +111,6 @@
 		A132173D1AA28FC1007159C6 /* SubmissionsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmissionsService.swift; sourceTree = "<group>"; };
 		A132173F1AA29032007159C6 /* EntityWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityWebService.swift; sourceTree = "<group>"; };
 		A13217421AA29908007159C6 /* AFHTTPSessionManager+RACExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AFHTTPSessionManager+RACExtensions.swift"; sourceTree = "<group>"; };
-		A1538BDD1AA33D6E00B10851 /* AccessServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessServiceProtocol.swift; sourceTree = "<group>"; };
-		A1538BDF1AA33D9900B10851 /* AccessService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessService.swift; sourceTree = "<group>"; };
-		A1538BE11AA33E3F00B10851 /* DiscoverViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiscoverViewModel.swift; path = Discover/DiscoverViewModel.swift; sourceTree = "<group>"; };
 		A1A4A68E1AA2B48A00989804 /* RACSignal+Mappings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RACSignal+Mappings.swift"; sourceTree = "<group>"; };
 		A458BB2FC592F4A96251131B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C3537E968B83FC3AC8EC75D4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -270,8 +264,6 @@
 				A132173F1AA29032007159C6 /* EntityWebService.swift */,
 				A13217311AA2572C007159C6 /* ServiceLocator.swift */,
 				11D415B21AA290A3007C1E09 /* BaseServiceProtocol.swift */,
-				A1538BDD1AA33D6E00B10851 /* AccessServiceProtocol.swift */,
-				A1538BDF1AA33D9900B10851 /* AccessService.swift */,
 				A111FE551AA2DDCC009F55CB /* CategoriesServiceProtocol.swift */,
 				A111FE571AA2DDD5009F55CB /* CategoriesService.swift */,
 				11D415B31AA290A3007C1E09 /* LocationService.swift */,
@@ -305,7 +297,6 @@
 			isa = PBXGroup;
 			children = (
 				11AA657E1AA24BD8004DA34B /* DiscoverViewController.swift */,
-				A1538BE11AA33E3F00B10851 /* DiscoverViewModel.swift */,
 			);
 			name = Discover;
 			sourceTree = "<group>";
@@ -484,7 +475,6 @@
 				11D415B61AA290A3007C1E09 /* LocationService.swift in Sources */,
 				A111FE681AA2EACE009F55CB /* SubmissionPhotoViewCell.swift in Sources */,
 				A111FE581AA2DDD5009F55CB /* CategoriesService.swift in Sources */,
-				A1538BE01AA33D9900B10851 /* AccessService.swift in Sources */,
 				11D415B11AA2908E007C1E09 /* ImagePickerController.swift in Sources */,
 				1180B3521AA2826000746875 /* ImagePickerViewModel.swift in Sources */,
 				A1A4A68F1AA2B48A00989804 /* RACSignal+Mappings.swift in Sources */,
@@ -493,7 +483,6 @@
 				A132173E1AA28FC1007159C6 /* SubmissionsService.swift in Sources */,
 				11AA657D1AA24BD8004DA34B /* AppDelegate.swift in Sources */,
 				A13217431AA29908007159C6 /* AFHTTPSessionManager+RACExtensions.swift in Sources */,
-				A1538BDE1AA33D6E00B10851 /* AccessServiceProtocol.swift in Sources */,
 				A13217441AA29E36007159C6 /* DiscoverViewController.swift in Sources */,
 				A111FE6A1AA2EDC0009F55CB /* SubmissionDonationViewCell.swift in Sources */,
 				A111FE541AA2DB5C009F55CB /* CategoryViewModel.swift in Sources */,
@@ -502,7 +491,6 @@
 				A13217371AA289ED007159C6 /* LocationTransform.swift in Sources */,
 				A111FE651AA2EACE009F55CB /* SubmissionCategoryViewCell.swift in Sources */,
 				A111FE4E1AA2DA9E009F55CB /* CategoriesViewController.swift in Sources */,
-				A1538BE21AA33E3F00B10851 /* DiscoverViewModel.swift in Sources */,
 				A132173C1AA28FB8007159C6 /* SubmissionsServiceProtocol.swift in Sources */,
 				A111FE521AA2DAF7009F55CB /* CategoryTableViewCell.swift in Sources */,
 			);

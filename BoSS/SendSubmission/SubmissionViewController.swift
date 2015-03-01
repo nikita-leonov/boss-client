@@ -23,8 +23,12 @@ class SubmissionViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        submit.rac_command = viewModel.submit
-        submit.rac_command.executionSignals.concat().subscribeNext { [weak self] _ in
+        submit.rac_command = RACCommand { [weak self] _ in
+            self?.showBraintreeDropInViewController()
+            return RACSignal.empty()
+        }
+        
+        viewModel.submit.executionSignals.concat().subscribeNext { [weak self] _ in
             _ = self?.dismissViewControllerAnimated(true, completion: nil)
         }
     }
@@ -48,11 +52,33 @@ class SubmissionViewController: UITableViewController {
         }
     }
     
+    private func showBraintreeDropInViewController() {
+        if let token = viewModel.accessToken {
+            let braintree = Braintree(clientToken: token)
+            let vc = braintree.dropInViewControllerWithDelegate(self)
+            
+            presentViewController(vc, animated: true, completion: nil)
+        }
+    }
+    
     @IBAction func unwindSubmissionTypeViewController(segue: UIStoryboardSegue) {
         let source = segue.sourceViewController as! CategoriesViewController
         if let categoryViewModel = source.selectedCategory {
             viewModel.category = categoryViewModel.categoryName
             tableView.reloadData()
         }
+    }
+}
+
+extension SubmissionViewController: BTDropInViewControllerDelegate {
+    func dropInViewController(viewController: BTDropInViewController!, didSucceedWithPaymentMethod paymentMethod: BTPaymentMethod!) {
+        viewModel.nonce = paymentMethod.nonce
+        viewController.dismissViewControllerAnimated(true, completion: { [weak self] _ in
+            _ = self?.viewModel.submit.execute(nil)
+        })
+    }
+    
+    func dropInViewControllerDidCancel(viewController: BTDropInViewController!) {
+        viewController.dismissViewControllerAnimated(true, completion: nil)
     }
 }

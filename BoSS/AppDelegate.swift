@@ -25,7 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let submissionsService = SubmissionsService(sessionManager: sessionManager)
         ServiceLocator.registerService(submissionsService as SubmissionsServiceProtocol)
         ServiceLocator.registerService(CategoriesService() as CategoriesServiceProtocol)
-        ServiceLocator.registerService(AccessService(sessionManager: sessionManager) as AccessServiceProtocol)
 
         return true
     }

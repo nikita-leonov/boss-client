@@ -22,6 +22,7 @@ class SubmissionViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.setNavigationBarHidden(false, animated: true)
         
         submit.rac_command = RACCommand { [weak self] _ in
             self?.showBraintreeDropInViewController()
@@ -39,6 +40,10 @@ class SubmissionViewController: UITableViewController {
         let result = super.tableView(tableView, cellForRowAtIndexPath: indexPath) as! SubmissionCell
         result.setViewModel(viewModel)
         return result as! UITableViewCell
+    }
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return (section == 0) ? CGFloat.min : super.tableView(tableView, heightForHeaderInSection: section)
     }
     
     // MARK: - Interacting with Storyboards

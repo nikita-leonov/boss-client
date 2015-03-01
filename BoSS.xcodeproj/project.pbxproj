@@ -44,6 +44,8 @@
 		A13217431AA29908007159C6 /* AFHTTPSessionManager+RACExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13217421AA29908007159C6 /* AFHTTPSessionManager+RACExtensions.swift */; };
 		A13217441AA29E36007159C6 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA657E1AA24BD8004DA34B /* DiscoverViewController.swift */; };
 		A1A4A68F1AA2B48A00989804 /* RACSignal+Mappings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A4A68E1AA2B48A00989804 /* RACSignal+Mappings.swift */; };
+		A1F4E6741AA360E40068C92B /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A12ACA491AA34B2400FCAB8D /* ObjectMapper.framework */; };
+		A1F4E6751AA360E40068C92B /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A12ACA491AA34B2400FCAB8D /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +70,28 @@
 			remoteGlobalIDString = 6AAC8F8119F03C2900E7A677;
 			remoteInfo = ObjectMapperTests;
 		};
+		A1F4E6761AA360E40068C92B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A12ACA431AA34B2400FCAB8D /* ObjectMapper.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6AAC8F7519F03C2900E7A677;
+			remoteInfo = ObjectMapper;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A1F4E6781AA360E40068C92B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A1F4E6751AA360E40068C92B /* ObjectMapper.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		115FDF151AA273AD00F1D6C1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -123,6 +146,7 @@
 			files = (
 				A12ACA4C1AA34B5300FCAB8D /* ObjectMapper.framework in Frameworks */,
 				115FDF161AA273AD00F1D6C1 /* CoreLocation.framework in Frameworks */,
+				A1F4E6741AA360E40068C92B /* ObjectMapper.framework in Frameworks */,
 				11AA659F1AA25912004DA34B /* MapKit.framework in Frameworks */,
 				24F22093CF1A124AC1182792 /* libPods.a in Frameworks */,
 			);
@@ -313,10 +337,12 @@
 				11AA65741AA24BD8004DA34B /* Frameworks */,
 				11AA65751AA24BD8004DA34B /* Resources */,
 				5F21079B3BCA806E312857A7 /* Copy Pods Resources */,
+				A1F4E6781AA360E40068C92B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A1F4E6771AA360E40068C92B /* PBXTargetDependency */,
 			);
 			name = BoSS;
 			productName = BoSS;
@@ -512,6 +538,11 @@
 			target = 11AA65761AA24BD8004DA34B /* BoSS */;
 			targetProxy = 11AA658F1AA24BD8004DA34B /* PBXContainerItemProxy */;
 		};
+		A1F4E6771AA360E40068C92B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ObjectMapper;
+			targetProxy = A1F4E6761AA360E40068C92B /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -617,6 +648,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = BoSS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -631,6 +663,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = BoSS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import MapKit
 
 class DiscoverViewController: UIViewController {
     @IBOutlet internal var snap: UIButton!
@@ -20,6 +21,7 @@ class DiscoverViewController: UIViewController {
                 if let strongSelf = self {
                     let viewModel = ImagePickerViewModel()
                     let imagePickerController: ImagePickerController = ImagePickerController()
+                    imagePickerController.sourceType = UIImagePickerController.isSourceTypeAvailable(.Camera) ? .Camera : .PhotoLibrary
                     imagePickerController.viewModel = viewModel
                     
                     viewModel.imageSelected!.subscribeNext({ (image) -> Void in
@@ -44,6 +46,14 @@ class DiscoverViewController: UIViewController {
                 return RACDisposable {}
             })
         })
+    }
+}
+
+extension DiscoverViewController: MKMapViewDelegate {
+    func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
+        var span = MKCoordinateSpanMake(0.01, 0.01)
+        var region = MKCoordinateRegionMake(userLocation.location.coordinate, span)
+        mapView.setRegion(region, animated: true)
     }
 }
 
